@@ -1,0 +1,12 @@
+
+
+body {
+    background-color: #EDEDED;
+    color: #1F1F23;
+}
+
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}

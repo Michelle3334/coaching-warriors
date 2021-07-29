@@ -17,7 +17,30 @@
         <!-- Courses Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-
+                {% for course in course_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if "placeholder" in course.image.url %}
+                                    <img class="card-img-top" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
+                                    {% else %}
+                                    <img class="card-img-top" src="{{ course.image.url }}" alt="">
+                                    {% endif %}
+                                </div>
+                                <a href="#" class="course-link">
+                                    <h3 class="card-title">{{ course.course_name }}</h3>
+                                    <p class="card-text">{{ course.excerpt }}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% if forloop.counter|divisibleby:3 %}
+                <div>
+                <div class="row">
+                {% endif %}
+                {% endfor %}
+                </div>
             </div>
         </div>
     </div>
