@@ -5,17 +5,6 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-class Module(models.Model):
-    module_name = models.CharField(max_length=200, unique=True)
-    content = models.TextField()
-    excerpt = models.TextField(blank=True)
-    created_on = models.DateTimeField(auto_now_add=True)
-    image = CloudinaryField('image', default='placeholder')
-
-    def __str__(self):
-        return self.module_name
-
-
 class Course(models.Model):
     course_name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -26,8 +15,6 @@ class Course(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     attendees = models.ManyToManyField(
         User, related_name='course_attendees', blank=True)
-    module_name = models.ForeignKey(
-        Module, models.SET_NULL, blank=True, null=True, related_name='modules')
     min_people = models.IntegerField(default=0)
     max_people = models.IntegerField(default=0)
 
@@ -41,12 +28,25 @@ class Course(models.Model):
         return self.attendees.count()
 
 
+class Module(models.Model):
+    module_name = models.CharField(max_length=200, unique=True)
+    content = models.TextField()
+    excerpt = models.TextField(blank=True)
+    course = models.ForeignKey(
+        Course, models.SET_NULL, blank=True, null=True, related_name='course')
+    created_on = models.DateTimeField(auto_now_add=True)
+    image = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return self.module_name
+
+
 class Lesson(models.Model):
-    module_name = models.ForeignKey(
-        Module, models.SET_NULL, blank=True, null=True, related_name='lessons')
     lesson_name = models.CharField(max_length=200, unique=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    module = models.ForeignKey(
+        Module, models.SET_NULL, blank=True, null=True, related_name='module')
 
     def __str__(self):
         return self.lesson_name
