@@ -28,7 +28,7 @@
                     <div class="col-md-4">
                         <div class="card mb-4 coursecard">
                             <div class="card-body">
-                                <a href="#" class="course-link">
+                                <a href="{% url 'course_detail' course.slug %}" class="course-link">
                                     <div class="image-container">
                                         {% if "placeholder" in course.image.url %}
                                         <img class="card-img-top" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
