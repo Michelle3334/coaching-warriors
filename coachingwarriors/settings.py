@@ -21,6 +21,12 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
+# CLOUDINARY_STORAGE = {
+#    'CLOUD_NAME': 'dqf94syyp',
+#    'API_KEY': '184461965233217',
+#    'API_SECRET': 'hukDNyInj8levp2TClvKBgq3Krs'
+# }
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -32,12 +38,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = "DEVELOPMENT"
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
-
-# CLOUDINARY_STORAGE = {
-#    'CLOUD_NAME': 'dqf94syyp',
-#    'API_KEY': '184461965233217',
-#    'API_SECRET': 'hukDNyInj8levp2TClvKBgq3Krs'
-# }
 
 # Application definition
 
