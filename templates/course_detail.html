@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!--featured image-->
+    <div class="image-container">
+        {% if "placeholder" in course.image.url %}
+        <img class="card-img-top" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
+        {% else %}
+        <img class="card-img-top" src="{{ course.image.url }}" alt="">
+        {% endif %}
+    </div>
+    <!--course title-->
+    <h1>{{ course.course_name }}</h1>
+</div>
+{%endblock%}
