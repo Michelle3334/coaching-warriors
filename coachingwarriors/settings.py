@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = "DEVELOPMENT"
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
@@ -37,7 +37,7 @@ ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 #    'CLOUD_NAME': 'dqf94syyp',
 #    'API_KEY': '184461965233217',
 #    'API_SECRET': 'hukDNyInj8levp2TClvKBgq3Krs'
-#}
+# }
 
 # Application definition
 
