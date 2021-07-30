@@ -33,11 +33,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dqf94syyp',
-    'API_KEY': '184461965233217',
-    'API_SECRET': 'hukDNyInj8levp2TClvKBgq3Krs'
-}
+# CLOUDINARY_STORAGE = {
+#    'CLOUD_NAME': 'dqf94syyp',
+#    'API_KEY': '184461965233217',
+#    'API_SECRET': 'hukDNyInj8levp2TClvKBgq3Krs'
+#}
 
 # Application definition
 
