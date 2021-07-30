@@ -15,15 +15,15 @@ class CourseDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
-        module = course.module.order_by('created_on')
-        lesson = module.lesson.order_by('created_on')
+#        module = course.module.order_by('created_on')
+#        lesson = module.lesson.order_by('created_on')
 
         return render(
             request,
             "course_detail.html",
             {
                 "course": course,
-                "module": module,
-                "lesson": lesson,
+#                "module": module,
+#                "lesson": lesson,
             }
         )
