@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-fluid text-center">
+<div class="d-none d-md-block container text-center">
     <!--featured image-->
-    <div>
+    <div class="img-fluid w-100">
         {% if "placeholder" in course.image.url %}
         <img src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
         {% else %}
-        <img src="{{ course.image.url }}" alt="">
+        <img src="{{ course.image.url }}">
         {% endif %}
     </div>
+</div>
+<div class="container text-center">
     <!--course title-->
     <h1>{{ course.course_name }}</h1>
     <div>
-        <p>{{ course.content | safe }}</p>
+        {{ course.content | safe }}
     </div>
 </div>
 {%endblock%}
