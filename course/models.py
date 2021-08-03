@@ -6,15 +6,14 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Course(models.Model):
-    course_name = models.CharField(max_length=200, unique=True)
+    course_name = models.CharField(
+        primary_key=True, max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()
     excerpt = models.TextField(blank=True)
     image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    attendees = models.ManyToManyField(
-        User, related_name='course_attendees', blank=True)
     min_people = models.IntegerField(default=0)
     max_people = models.IntegerField(default=0)
 
@@ -26,27 +25,3 @@ class Course(models.Model):
 
     def number_of_attendees(self):
         return self.attendees.count()
-
-
-class Module(models.Model):
-    module_name = models.CharField(max_length=200, unique=True)
-    content = models.TextField()
-    excerpt = models.TextField(blank=True)
-    course = models.ForeignKey(
-        Course, models.SET_NULL, blank=True, null=True, related_name='course')
-    created_on = models.DateTimeField(auto_now_add=True)
-    image = CloudinaryField('image', default='placeholder')
-
-    def __str__(self):
-        return self.module_name
-
-
-class Lesson(models.Model):
-    lesson_name = models.CharField(max_length=200, unique=True)
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    module = models.ForeignKey(
-        Module, models.SET_NULL, blank=True, null=True, related_name='module')
-
-    def __str__(self):
-        return self.lesson_name
