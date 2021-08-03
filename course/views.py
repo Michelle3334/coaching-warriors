@@ -31,3 +31,10 @@ class Gallery(TemplateView):
 
     def gallery(self, request):
         return render(request, 'gallery.html')
+
+
+class About(TemplateView):
+    template_name = 'about.html'
+
+    def about(self, request):
+        return render(request, 'about.html')
