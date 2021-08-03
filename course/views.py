@@ -38,3 +38,10 @@ class About(TemplateView):
 
     def about(self, request):
         return render(request, 'about.html')
+
+
+class Contact(TemplateView):
+    template_name = 'contact.html'
+
+    def contact(self, request):
+        return render(request, 'contact.html')
