@@ -1,23 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="text-center mt-3">Contact Us</h2>
-<div class="col-6">
+<h2 class="text-center mt-5">Contact Us</h2>
+<p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
+<p class="text-center small">We will never share your details with anyone.</p>
+<div class="container">
     <form class="m-5">
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" placeholder="Jane Doe">
+        <div class="form-group row">
+            <div class="col">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" placeholder="Jane">
+            </div>
+            <div class="col">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" placeholder="Doe">
+            </div>
         </div>
-        <div class="form-group">
-            <label for="email address">Email address</label>
+        <div class="form-group mt-2">
+            <label for="email_address">Email address</label>
             <input type="email" class="form-control" placeholder="name@example.com">
         </div>
-        <div class="form-group">
-            <label for="comment">Leave your comment here:</label>
-            <textarea class="form-control" id="comment" placeholder="Your comments or questions"rows="5"></textarea>
+        <div class="form-group mt-2">
+            <label for="phone">Enter your phone number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="072 111 3333"> 
         </div>
-        <div>
-            <button type="submit" class="btn btn-primary text-center m-2">Submit</button>
+        <div class="form-group mt-2">
+            <label for="comment">Leave your comment here:</label>
+            <textarea class="form-control text" id="comment" placeholder="Your comments or questions" rows="5"></textarea>
+        </div>
+        <div class="mt-2 text-center">
+           <button type="submit" class="btn btn-dark text-center m-2">Submit</button>
         </div>
     </form>
 </div>

@@ -3,6 +3,7 @@ body {
     color: #1F1F23;
 }
 
+/**Course information cards**/
 .course-link {
     text-decoration: none;
     color: inherit;
