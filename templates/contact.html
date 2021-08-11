@@ -4,59 +4,11 @@
 <h2 class="text-center mt-5">Contact Us</h2>
 <p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
 <p class="text-center small">We will never share your details with anyone.</p>
-<div class="container">
-    <form id="contact" class="m-5" onsubmit="return sendMail(this);">
-        <div class="form-group row">
-            <div class="col">
-                <label id="full_name">Full Name</label>
-                <input type="text" class="form-control" placeholder="Jane Doe" required>
-            </div>
-        </div>
-        <div class="form-group mt-2">
-            <label id="email_address">Email address</label>
-            <input type="email" class="form-control" placeholder="name@example.com" required>
-        </div>
-        <div class="form-group mt-2">
-            <label id="phone">Enter your phone number</label>
-            <input type="tel" class="form-control" id="phone" name="phone" placeholder="072 111 3333" required> 
-        </div>
-        <div class="form-group mt-2">
-            <label id="comment">Leave your comment here:</label>
-            <textarea class="form-control text" id="comment" placeholder="Your comments or questions" rows="5" required></textarea>
-        </div>
-        <div class="mt-2 text-center">
-           <button type="submit" class="btn btn-dark text-center m-2">Submit</button>
-        </div>
-    </form>
-</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit" class="btn btn-dark text-center m-2">Submit</button>
+    </div>
+</form>
 {% endblock content%}
-{% block extra_js %}
-    <!--JavaScript-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("user_QDJTgXDuqV5lfrpdUBVPj");
-        })();
-    </script>
-    <script>
-        function sendMail(contactForm) {
-            emailjs.send("coachingwar@gmail.com","Contact from website", {
-                "from_name": contactForm.full_name.value,
-                "from_email": contactForm.email_address.value,
-                "message": contactForm.comment.value,
-                "telephone": contactForm.phone.value
-            })
-            .then(
-                function(response) {
-                    console.log("SUCCESS", response);
-                },
-                function(error) {
-                    console.log("FAILED", error);
-                }
-            );
-            return false;  // To block from loading a new page
-        }
-    </script>
-{% endblock %}
