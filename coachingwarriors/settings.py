@@ -34,7 +34,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
@@ -90,8 +90,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Email settings
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = 'AKIAUS5UYEJKHMVS2RHJ'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAUS5UYEJKJCVIN5WO'
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
 AWS_SES_REGION_NAME = 'eu-north-1'
 AWS_SES_REGION_ENDPOINT = 'email.eu-north-1.amazonaws.com'
 
