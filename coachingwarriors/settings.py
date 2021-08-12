@@ -34,7 +34,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
@@ -88,13 +88,12 @@ WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Email settings
-DEFAULT_FROM_EMAIL = 'coachingwar@gmail.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = 'SG.DTkXu50MQSC2u0-I_DAaDg.iR2nfG2lwoaF6gAgLh8YxZ5R5'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = 'AKIAUS5UYEJKHMVS2RHJ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_SES_REGION_NAME = 'eu-north-1'
+AWS_SES_REGION_ENDPOINT = 'email.eu-north-1.amazonaws.com'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
