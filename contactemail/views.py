@@ -11,7 +11,7 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = "Website Enquiry"
-            from_email = form.cleaned_data['from_email']
+            from_email = form.cleaned_data['email_address']
             body = {
                 'first_name': form.cleaned_data['first_name'],
                 'last_name': form.cleaned_data['last_name'],

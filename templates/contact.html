@@ -4,7 +4,7 @@
 <h2 class="text-center mt-5">Contact Us</h2>
 <p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
 <p class="text-center small">We will never share your details with anyone.</p>
-<form method="post">
+<form method="post" class="text-center mt-5">
     {% csrf_token %}
     {{ form.as_p }}
     <div class="form-actions">
