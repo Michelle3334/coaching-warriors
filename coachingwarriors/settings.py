@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'course',
     'contactemail',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 # Email settings
 DEFAULT_FROM_EMAIL = 'coachingwar@gmail.com'
