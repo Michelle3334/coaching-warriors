@@ -34,7 +34,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
@@ -85,7 +85,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Email settings
 DEFAULT_FROM_EMAIL = 'coachingwar@gmail.com'
