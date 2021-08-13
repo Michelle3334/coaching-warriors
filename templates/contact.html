@@ -2,6 +2,18 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
 <h2 class="text-center mt-5">Contact Us</h2>
 <p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
 <p class="text-center small">We will never share your details with anyone.</p>
