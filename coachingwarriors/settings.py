@@ -106,12 +106,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
 
 # Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_ACCESS_KEY_ID = 'AKIAUS5UYEJKJCVIN5WO'
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
-AWS_SES_REGION_NAME = 'eu-north-1'
-AWS_SES_REGION_ENDPOINT = 'email.eu-north-1.amazonaws.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django_ses.SESBackend'
+# AWS_ACCESS_KEY_ID = 'AKIAUS5UYEJKJCVIN5WO'
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
+# AWS_SES_REGION_NAME = 'eu-north-1'
+# AWS_SES_REGION_ENDPOINT = 'email.eu-north-1.amazonaws.com'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

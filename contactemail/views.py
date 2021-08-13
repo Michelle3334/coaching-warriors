@@ -18,6 +18,7 @@ def contact(request):
                 'email': form.cleaned_data['email_address']
             }
             message = "\n".join(body.values())
+            messages.success(request, 'Message sent successfully!')
 
             try:
                 send_mail(subject, message, 'coachingwar@gmail.com', [

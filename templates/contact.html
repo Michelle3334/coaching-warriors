@@ -2,14 +2,6 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<!--Confirmation message -->
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
-</ul>
-{% endif %}
 <h2 class="text-center mt-5">Contact Us</h2>
 <p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
 <p class="text-center small">We will never share your details with anyone.</p>
