@@ -6,6 +6,21 @@
 <!--Hero Image-->
 <div class="card bg-dark text-white rounded-0">
     <img src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627551006/mountain_qphrrl.jpg" class="img-fluid max-width: 100% height: auto" alt="People ontop mountain at sunset">
+    <!--Messages-->
+    <div class="card-img-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="card-img-overlay d-flex justify-content-end align-items-end">
         <h1 class="card-title">Coaching Warriors</h1>
     </div>
