@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-
+<!--About our concepts-->
 <div class="card m-3">
     <div class="row no-gutters">
         <div class="col-md-8">
@@ -44,6 +44,30 @@
         <div class="col-md-4">
             <img class="card-img" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627992367/inspiration-1514296_640_notfth.jpg" alt="Woman leaping at sunset">
         </div>
+    </div>
+</div>
+<!--About our coaches-->
+<div class="text-center">
+    <h4>About Our Coaches</h4>
+</div>
+<div class="card m-3">
+    <div class="row no-gutters">
+        {% for coach in coach_list %}
+        <div class="col-md-4">
+            {% if "placeholder" in coach.profile_image.url %}
+            <img class="card-img-top" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
+            {% else %}
+            <img class="card-img-top" src="{{ coach.profile_image.url }}" alt="">
+            {% endif %}
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <p class="card-text"></p>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {%endblock%}

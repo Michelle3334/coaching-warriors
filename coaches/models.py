@@ -12,6 +12,7 @@ class Coach(models.Model):
     profile_image = CloudinaryField('image', default='placeholder')
     title = models.CharField(max_length=100)
     about = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ['coach_name']

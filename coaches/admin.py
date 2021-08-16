@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Coach
+from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
+
+@admin.register(Coach)
+class CourseAdmin(SummernoteModelAdmin):
+
+    search_fields = ['coach_name', 'content']
+    summernote_fields = ('about')
