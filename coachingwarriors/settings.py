@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'django_summernote',
     'course',
     'contactemail',
-    'crispy_forms'
+    'coaches',
+    'crispy_forms',
 ]
 
 SITE_ID = 1
