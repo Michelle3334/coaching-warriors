@@ -4,7 +4,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Coach)
-class CourseAdmin(SummernoteModelAdmin):
+class CoachAdmin(SummernoteModelAdmin):
 
     search_fields = ['coach_name', 'content']
     summernote_fields = ('about')
