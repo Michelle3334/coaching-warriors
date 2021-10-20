@@ -110,7 +110,7 @@ Images were sourced from pixabay.com.
 
 ### Hero Image
    * 
-    <img src="">
+    <img src="media/images/hero.jpg">
 
 ### Available Courses
    * 
@@ -158,7 +158,7 @@ Images were sourced from pixabay.com.
     <img src="">
 
     * Screenshots of html validation
-        * 
+    <img src="">
     
     * Screenshot of javascript validation
     <img src="">
@@ -189,7 +189,6 @@ Screenshots of the final test are presented below:
 ### As a returning user:
 
 ### As a website owner:
-
 
 ## Known Bugs
 
