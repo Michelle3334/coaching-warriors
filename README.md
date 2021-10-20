@@ -109,21 +109,26 @@ Images were sourced from pixabay.com.
     <img src="media/images/logout.PNG"> 
 
 ### Hero Image
-   * 
+   * An eye catching image on the home page.
 <img src="media/images/hero.jpg">
     
 
 ### Available Courses
-   * 
-<img src="">  
+   * On the home page the available courses are displayed, if there are more than 3 available then the user can click on 'next' to view the other available courses.
+   * The images are responsive when the user scrolls over an image.
+   * If the user clicks on a specific course they can view the full description of the course information.
+
+<img src="media/images/course.PNG">  
 
 ### Gallery
-   * 
-<img src="">   
+   * The gallery showcases images of course attendees and venues.
+<img src="media/images/gallery_snip.PNG">   
 
 ### Contact
    * This page invites the user to submit comments or suggestions to help improve the website.
-    <img src="">
+   * On submission of the form the user is provided with a confirmation message.
+   * The information provided is sent to a working gmail account. 
+    <img src="media/images/contact.PNG">
 
 ## Future features
 
