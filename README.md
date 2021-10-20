@@ -110,15 +110,16 @@ Images were sourced from pixabay.com.
 
 ### Hero Image
    * 
-    <img src="media/images/hero.jpg">
+<img src="media/images/hero.jpg">
+    
 
 ### Available Courses
    * 
-   <img src="">  
+<img src="">  
 
 ### Gallery
    * 
-    <img src="">   
+<img src="">   
 
 ### Contact
    * This page invites the user to submit comments or suggestions to help improve the website.
