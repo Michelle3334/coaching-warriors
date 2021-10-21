@@ -7,4 +7,5 @@ from django_summernote.admin import SummernoteModelAdmin
 class CoachAdmin(SummernoteModelAdmin):
 
     search_fields = ['coach_name', 'content']
+    list_display = ('coach_name', 'status')
     summernote_fields = ('about')
