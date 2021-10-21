@@ -1,11 +1,33 @@
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.contrib import messages
+from .forms import BookingForm
 
-# Create your views here.
 
+def booking(request):
+    if request.method == 'GET':
+        form = BookingForm()
+    else:
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            subject = "Booking Request"
+            body = {
+                'message': form.cleaned_data['message'],
+                'first_name': form.cleaned_data['first_name'],
+                'last_name': form.cleaned_data['last_name'],
+                'email': form.cleaned_data['email_address'],
+                'telephone': form.cleaned_data['telephone'],
+                'date': form.cleaned_data['date'],
+                'course': form.cleaned_data['course'],
+            }
+            message = "\n".join(body.values())
+            messages.success(request, 'Message sent successfully!')
 
-class Booking(TemplateView):
-    template_name = 'booking.html'
-
-    def booking(self, request):
-        return render(request, 'booking.html')
+            try:
+                send_mail(subject, message, 'coachingwar@gmail.com', [
+                    'coachingwar@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+    form = BookingForm()
+    return render(request, "booking.html", {'form': form})

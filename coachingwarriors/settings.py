@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'contactemail',
     'coaches',
     'booking',
+    'phonenumber_field',
     'crispy_forms',
 ]
 
