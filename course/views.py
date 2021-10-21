@@ -13,7 +13,7 @@ class CourseList(generic.ListView):
 
 class CourseDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, slug):
         queryset = Course.objects.filter(status=1)
         course = get_object_or_404(queryset, slug=slug)
 
