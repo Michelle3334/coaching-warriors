@@ -46,8 +46,8 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-control" id="course" name="course" required>
-                        {% for course in Course %}
-		                    <option value="{{ course.id }}">{{ course.course_name }}</option>
+                        {% for course in course_list %}
+		                    <option value="{{ course_list.id }}">{{ course_name }}</option>
 	                    {% endfor %}
                     </select>
                     <label for="course" class="form-label ps-4">Select a course</label>
