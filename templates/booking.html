@@ -27,38 +27,37 @@
         <form id="form" method="post" class="mt-5 px-5">
             {% csrf_token %}
             <div class="row">
-                <div class="mb-3">
-                    <label for="fname" class="form-label">First Name:</label>
-                    <input type="text" class="form-control" id="fname" name="first-name" placeholder="Jane" required>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="fname" name="first-name" required>
+                    <label for="fname" class="form-label ps-4">First Name</label>
                 </div>
-                <div class="mb-3">
-                    <label for="lname" class="form-label">Last Name:</label>
-                    <input type="text" class="form-control" id="lname" name="last-name" placeholder="Doe" required>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="lname" name="last-name" required>
+                    <label for="lname" class="form-label ps-4">Last Name</label>
                 </div>
-                <div class="mb-3">
-                    <label for="telephone" class="form-label">Your Phone Number:</label>
-                    <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="0123456789"
-                        required>
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                    <label for="telephone" class="form-label ps-4">Your Phone Number</label>
                 </div>
-                <div class="mb-3">
-                    <label for="mail" class="form-label">Your Email Address:</label>
-                    <input type="email" class="form-control" id="mail" name="mail" placeholder="jdoe@mail.com" required>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="mail" name="mail" required>
+                    <label for="mail" class="form-label ps-4">Your Email Address</label>
                 </div>
-                <div class="mb-3">
-                    <label for="course" class="form-label">Select a course:</label>
+                <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="course" name="course" required>
+                    <label for="course" class="form-label ps-4">Select a course</label>
                 </div>
-                <div class="mb-3">
-                    <label for="coach" class="form-label">Select a coach:</label>
+                <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="coach" name="coach" required>
+                    <label for="coach" class="form-label ps-4">Select a coach</label>
                 </div>
-                <div class="mb-3">
-                    <label for="date1" class="form-label">First date option:</label>
+                <div class="form-floating mb-3">
                     <input type="date" class="form-control" id="date1 " name="date1" required>
+                    <label for="date1" class="form-label ps-4">First date option</label>
                 </div>
-                <div class="mb-3">
-                    <label for="date2" class="form-label">Second date option:</label>
+                <div class="form-floating mb-3">
                     <input type="date" class="form-control" id="date2" name="date2" required>
+                    <label for="date2" class="form-label ps-4">Second date option</label>
                 </div>
             </div>
             <div class="text-center">
