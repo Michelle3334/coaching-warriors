@@ -45,18 +45,16 @@
                     <label for="mail" class="form-label ps-4">Your Email Address</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <select class="form-control" id="course" name="course" required>
+                    <select class="form-control" id="course_list" name="course_list" required>
                         {% for course in course_list %}
-		                    <option value="{{ course_list.id }}">{{ course_name }}</option>
+		                    <option value="{{ course.id }}">{{ course.name }}</option>
 	                    {% endfor %}
                     </select>
                     <label for="course" class="form-label ps-4">Select a course</label>
                 </div>
                 <div class="form-floating mb-3">
                     <select type="text" class="form-control" id="coach" name="coach" required>
-                        {% for coach in Coach %}
-                        <option value="{{ coach.id }}">{{ coach.coach_name }}</option>
-                    {% endfor %}
+
                     </select>
                     <label for="coach" class="form-label ps-4">Select a coach</label>
                 </div>
