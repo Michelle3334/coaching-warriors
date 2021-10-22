@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block content %}
@@ -44,11 +45,19 @@
                     <label for="mail" class="form-label ps-4">Your Email Address</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="course" name="course" required>
+                    <select class="form-control" id="course" name="course" required>
+                        {% for course in Course %}
+		                    <option value="{{ course.id }}">{{ course.course_name }}</option>
+	                    {% endfor %}
+                    </select>
                     <label for="course" class="form-label ps-4">Select a course</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="coach" name="coach" required>
+                    <select type="text" class="form-control" id="coach" name="coach" required>
+                        {% for coach in Coach %}
+                        <option value="{{ coach.id }}">{{ coach.coach_name }}</option>
+                    {% endfor %}
+                    </select>
                     <label for="coach" class="form-label ps-4">Select a coach</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -58,6 +67,10 @@
                 <div class="form-floating mb-3">
                     <input type="date" class="form-control" id="date2" name="date2" required>
                     <label for="date2" class="form-label ps-4">Second date option</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="comment" name="comment" rows="4"></textarea>
+                    <label for="comment" class="form-label ps-4">Additional information</label>
                 </div>
             </div>
             <div class="text-center">

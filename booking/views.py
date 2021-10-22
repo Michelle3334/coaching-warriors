@@ -1,8 +1,6 @@
-from django.core.mail import send_mail, BadHeaderError
 from django.views.generic import TemplateView
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.contrib import messages
+from course.models import Course
 
 
 class Booking(TemplateView):
