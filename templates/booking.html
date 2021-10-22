@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 {% block content %}
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -14,15 +14,74 @@
         </div>
     </div>
 </div>
-<h2 class="text-center mt-5">Bookings form</h2>
-<!--Bookings form-->
 <div class="container">
-    <form id="form" method="post" class="mt-5">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <div class="text-center">
-          <button data-toggle="modal" data-target="message" type="submit" class="btn btn-dark text-center m-2">Submit</button>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mt-5">Booking form</h2>
         </div>
-    </form>
-  </div>
+    </div>
+<!--Bookings form-->
+    <div class="row">
+        <div class="col-12">
+            <div id="booking-form">
+                <form id="form" method="post" class="mt-5">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="text" name="first-name" placeholder="First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="text" name="last-name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="tel" name="telephone" placeholder="Your Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="email" name="email" placeholder="Your Email Address" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="email" name="email" placeholder="Your Email Address" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="text" name="course" placeholder="Select a course" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <input type="text" name="coach" placeholder="Select a coach" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <label for="date1">First date option</label>
+                                <input type="date" id="date1 "name="date1" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-30">
+                                <label for="date2">Second date option</label>
+                                <input type="date" id="date2" name="date2" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button data-toggle="modal" data-target="message" type="submit" class="btn btn-dark text-center m-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {%endblock%}
