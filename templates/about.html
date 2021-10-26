@@ -53,14 +53,14 @@
 <div class="card m-3">
     <div class="row no-gutters">
         {% for coach in coach_list %}
-        <div class="col-md-4">
+        <div class="col-md-2">
             {% if "placeholder" in coach.profile_image.url %}
-            <img class="card-img-top" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
+            <img class="img-thumbnail" src="https://res.cloudinary.com/dqf94syyp/image/upload/v1627545433/woman-jumping_vda4tj.jpg">
             {% else %}
-            <img class="card-img-top" src="{{ coach.profile_image.url }}" alt="">
+            <img class="img-thumbnail" src="{{ coach.profile_image.url }}" alt="">
             {% endif %}
         </div>
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="card-body">
                 <h5 class="card-title">{{ coach.coach_name }}</h5>
                 <p class="card-text">{{ coach.title }}</p>
