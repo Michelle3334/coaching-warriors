@@ -8,7 +8,6 @@ class CourseList(generic.ListView):
     model = Course
     queryset = Course.objects.filter(status=1)
     template_name = 'index.html'
-    paginate_by = 3
 
 
 class CourseDetail(View):
