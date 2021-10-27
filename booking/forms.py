@@ -1,5 +1,7 @@
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
+from course.models import Course
+from coaches.models import Coach
 
 
 class BookingForm(forms.Form):
@@ -7,8 +9,10 @@ class BookingForm(forms.Form):
     last_name = forms.CharField(required=True)
     email_address = forms.EmailField(required=True)
     telephone = PhoneNumberField(widget=forms.TextInput(), required=True)
-    course = forms.CharField()
-    coach = forms.CharField()
+    course = forms.ModelChoiceField(
+        queryset=Course.objects.filter(status=1), initial=0)
+    coach = forms.ModelChoiceField(
+        queryset=Coach.objects.filter(status=1), initial=0)
     date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     additional_information = forms.CharField(
         widget=forms.Textarea, required=False)
