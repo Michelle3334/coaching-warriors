@@ -10,9 +10,11 @@ class BookingForm(forms.Form):
     email_address = forms.EmailField(required=True)
     telephone = PhoneNumberField(widget=forms.TextInput(), required=True)
     course = forms.ModelChoiceField(
-        queryset=Course.objects.filter(status=1), initial=0)
+        queryset=Course.objects.filter(status=1), 
+        empty_label="(Please select a course)")
     coach = forms.ModelChoiceField(
-        queryset=Coach.objects.filter(status=1), initial=0)
+        queryset=Coach.objects.filter(status=1), 
+        empty_label="(Please select a coach)")
     date = forms.DateField(widget=forms.TextInput(attrs={'type': 'date'}))
     additional_information = forms.CharField(
         widget=forms.Textarea, required=False)
