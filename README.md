@@ -3,9 +3,11 @@
 ## Project 4 - Full Stack Toolkit
 <img src="media/images/responsive.PNG">
 
-The live site can be found <a href="https://coachingwarriors.herokuapp.com/" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
-
 The aim of this project was to build a Full-Stack site based on business logic used to control a centrally-owned dataset.
+
+Coaching warriors is a site designed to showcase the various courses that the coaches offer. Users can find information about the courses and coaches, and apply to attend a course.
+
+The live site can be found <a href="https://coachingwarriors.herokuapp.com/" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
 
 # Table of Contents
 1. [UX](https://github.com/Michelle3334/coaching-warriors#ux)
@@ -94,7 +96,6 @@ The main colors used in this project:
 <img src="media/images/contrast-check.PNG">
 
 ### Fonts
-
 Sans-Serif is used as a backup font.
 
 ### Images
@@ -111,13 +112,12 @@ Images were sourced from pixabay.com.
     <img src="media/images/login.PNG"> 
     <img src="media/images/logout.PNG"> 
 
-### Hero Image
-   * An eye catching image on the home page.
+### Landing page
+   * The landing page has an eye catching image to inspire.
 <img src="media/images/hero.jpg">
     
-
-### Available Courses
-   * On the home page the available courses are displayed, if there are more than 3 available then the user can click on 'next' to view the other available courses.
+### Available Courses section
+   * On the home page the available courses are displayed, with a short description.
    * The images are responsive when the user scrolls over an image.
    * If the user clicks on a specific course they can view the full description of the course information.
 
@@ -127,10 +127,16 @@ Images were sourced from pixabay.com.
    * The gallery showcases images of course attendees and venues.
 <img src="media/images/gallery_snip.PNG">   
 
+### Booking form
+* This page invites the user to submit their interest to attend a specific course.
+* On submission of the form the user is provided with a confirmation message.
+* The information is sent to an active gmail account.
+<img src="media/images/booking.PNG">
+
 ### Contact
    * This page invites the user to submit comments or suggestions to help improve the website.
    * On submission of the form the user is provided with a confirmation message.
-   * The information provided is sent to a working gmail account. 
+   * The information provided is sent to an active gmail account. 
     <img src="media/images/contact.PNG">
 
 ## Future features
