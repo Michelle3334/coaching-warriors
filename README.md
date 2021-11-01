@@ -1,8 +1,11 @@
 # Coaching Warriors
 
 ## Project 4 - Full Stack Toolkit
+<img src="media/images/responsive.PNG">
 
 The live site can be found <a href="https://coachingwarriors.herokuapp.com/" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
+
+The aim of this project was to build a Full-Stack site based on business logic used to control a centrally-owned dataset.
 
 # Table of Contents
 1. [UX](https://github.com/Michelle3334/coaching-warriors#ux)
