@@ -140,13 +140,25 @@ Images were sourced from pixabay.com.
     <img src="media/images/contact.PNG">
 
 ## Future features
-
+* A Calendar on the booking form page that shows available days for booking.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
+# Database Schema
+### User Profile model
+* Django's user model was utilised.
+
+### Course app
+<img src="media/images/course_dbm.PNG">
+
+### Coaches app
+<img src="media/images/coaches_dbm.PNG">
+
 # Technologies Used:
 ### Programming Languages:
-* CSS, HTML, Javascript and Python.
+* CSS, HTML, Javascript, Python and Django.
+### Database framework
+* Postgres,
 ### Git
 * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 ### Github
