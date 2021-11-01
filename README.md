@@ -17,17 +17,18 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
     * [Wireframes](https://github.com/Michelle3334/coaching-warriors#wireframes)
     * [Surface](https://github.com/Michelle3334/coaching-warriors#surface)
 2. [Features](https://github.com/Michelle3334/coaching-warriors#features)
-3. [Technologies Used](https://github.com/Michelle3334/coaching-warriors#technologies-used)
-4. [Testing](https://github.com/Michelle3334/coaching-warriors#testing)
+3. [Database Schema](https://github.com/Michelle3334/coaching-warriors#database-schema)
+4. [Technologies Used](https://github.com/Michelle3334/coaching-warriors#technologies-used)
+5. [Testing](https://github.com/Michelle3334/coaching-warriors#testing)
     * [Functionality testing](https://github.com/Michelle3334/coaching-warriors#functionality-testing)
     * [Code Validation](https://github.com/Michelle3334/coaching-warriors#code-validation)
     * [Compatibility testing](https://github.com/Michelle3334/coaching-warriors#compatibility-testing)
     * [Performance testing](https://github.com/Michelle3334/coaching-warriors#performance-testing)
     * [User stories testing](https://github.com/Michelle3334/coaching-warriors#user-stories-testing)
     * [Known bugs](https://github.com/Michelle3334/coaching-warriors#known-bugs)
-5. [Deployment](https://github.com/Michelle3334/coaching-warriors#deployment)
-6. [Credits](https://github.com/Michelle3334/coaching-warriors#credits)
-7. [Acknowledgments](https://github.com/Michelle3334/coaching-warriors#acknowledgements)
+6. [Deployment](https://github.com/Michelle3334/coaching-warriors#deployment)
+7. [Credits](https://github.com/Michelle3334/coaching-warriors#credits)
+8. [Acknowledgments](https://github.com/Michelle3334/coaching-warriors#acknowledgements)
 
 # UX
 ## Website owner business goals
