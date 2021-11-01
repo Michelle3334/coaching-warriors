@@ -202,10 +202,20 @@ Images were sourced from pixabay.com.
 I ran the Lighthouse tool to check performance of the website. 
 Screenshots of the final test are presented below:
 * Desktop
-<img src="">
+    * Home page
+    <img src="media/images/desktop_lighthouse_home.PNG">
+    * Gallery
+    <img src="media/images/desktop_lighthouse_gallery.PNG">
+    * About page
+    <img src="media/images/desktop_lighthouse_about.PNG">
 
 * Mobile
-<img src="">
+    * Home page
+    <img src="media/images/mobile_lighthouse_home.PNG">
+    * Gallery
+    <img src="media/images/mobile_lighthouse_gallery.PNG">
+    * About page
+    <img src="media/images/mobile_lighthouse_about.PNG">
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
