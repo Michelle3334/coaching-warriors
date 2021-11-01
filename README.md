@@ -158,7 +158,7 @@ Images were sourced from pixabay.com.
 ### Programming Languages:
 * CSS, HTML, Javascript, Python and Django.
 ### Database framework
-* Postgres,
+* Postgres.
 ### Git
 * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 ### Github
@@ -225,13 +225,58 @@ Screenshots of the final test are presented below:
 # Deployment
 The project was deployed to GitHub Pages using the following steps, I used Gitpod as a development environment where I commited all changes to git version control system. I used the push command in Gitpod to save changes into GitHub.
 
-The project was then deployed to Heroku using the following steps:
+### Deployment to Heroku
+Before creating a Heroku app make sure your project has these two files:
 
-1. Log in to Heroku and add a new app.
-2. Link the project from GitHub to Heroku.
-3. Add the ????? to the ConfigVars in Settings.
-4. Add the Python and NodeJS buildpacks.
-5. Manually deploy the project (I used the manual deploy option in order to control what version was deployed to the live environment).
+* requirements.txt - You can create one by using <code>pip3 freeze --local > requirements.txt</code>
+* Procfile - You can create one by using echo web: <code>python run.py > Procfile</code>
+
+### Create application:
+
+1. Navigate to Heroku's site <a href="https://id.heroku.com/login" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
+2. Register and/or Login as applicable.
+3. Click on the new button in the top right and select "Create new app".
+4. Enter the app name and region closest to you.
+5. Click the create app button.
+
+### Set environment variables:
+
+1. Click on the settings tab and then click "Reveal config vars".
+
+2. Config variables added throughout project:
+(add image of variables)
+
+### Setting up database in deployment
+
+1. Temporarily add the <code>DATABASE_URL</code> to <code>settings.py</code>:
+
+    <code>DATABASES = {
+'default': dj_database_url.parse('your_postgres_database_url')
+}</code>
+
+2. Migrate the data from development to production version.
+
+    * To migrate the database models in the project to the Postgres database you can use the following command:
+
+    <code>python3 manage.py migrate</code>
+
+3. You will then need a superuser for the Postgres database too. To create one you can use the following command:
+
+    <code>python3 manage.py createsuperuser</code>
+
+4. Remove the Postgres database URL from settings.py as this should not in any case be deployed to GitHub for security reasons.
+
+6. To connect your Heroku app to be deployed from a Github repository, you can follow these steps:
+
+    * Open the heroku app page on the deploy tab and select GitHub - Connect to GitHub.
+    * Sign into GitHub if not already.
+    * A prompt to find a Github repository to connect to will then be displayed.
+    * Enter the repository name for the project and click search.
+    * Once the repository has been found, click the connect button.
+6. Once you have your GitHub repository connected, without leaving deploy tab:
+
+    * Under Automatic deploys section, choose the branch you want to deploy from and then click the "Enable Automatic Deploys" button.
+    * To deploy your app to Heroku click the "Deploy Branch" button.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
