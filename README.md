@@ -125,7 +125,7 @@ Images were sourced from pixabay.com.
 <img src="media/images/course.PNG">  
 
 ### Gallery
-   * The gallery showcases images of course attendees and venues.
+   * The gallery showcases images of previous course attendees and venues.
 <img src="media/images/gallery_snip.PNG">   
 
 ### Booking form
@@ -147,7 +147,7 @@ Images were sourced from pixabay.com.
 
 # Database Schema
 ### User Profile model
-* Django's user model was utilised.
+* Django's user and admin model was utilised.
 
 ### Course app
 <img src="media/images/course_dbm.PNG">
@@ -166,8 +166,6 @@ Images were sourced from pixabay.com.
 * GitHub is used to store the projects code after being pushed from Git.
 ### Google Fonts
 * Google Fonts was used to import fonts.
-### Font Awesome
-* Font Awesome was used on the Home page to add icons for design and UX purposes.
 ### Balsamiq
 * Balsamiq was used to create the wireframes during the design process.
 
