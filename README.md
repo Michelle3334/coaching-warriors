@@ -97,7 +97,7 @@ The main colors used in this project:
 <img src="media/images/contrast-check.PNG">
 
 ### Fonts
-Sans-Serif is used as a backup font.
+Sans-Serif is used as the main font.
 
 ### Images
 Images were sourced from pixabay.com.
@@ -173,24 +173,18 @@ Images were sourced from pixabay.com.
 
 # Testing
 ## Functionality Testing
-* I used Google Chrome developer tools throughout the development process for testing and solving problems with style issues.
+* I used Google Chrome developer tools throughout the development process for testing and solving problems with style and display issues.
 * All links were tested multiple times during the development process to ensure that all pages were linked correctly.
+* Form elements were tested to ensure that they work as they should, with user feedback on error and successful submission.
 
 
 ## Code Validation
-* The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. Beautifytools was used to validate the JavaScript code.
+1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.
 
     * Screenshot of css validation 
-    <img src="">
+    <img src="media/images/css_valid.PNG">
 
-    * Screenshots of html validation
-    <img src="">
-    
-    * Screenshot of javascript validation
-    <img src="">
 
-    * Screenshot of python validation
-    <img src="">
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -293,17 +287,16 @@ Before creating a Heroku app make sure your project has these two files:
 ## Code
 * All code was written by the developer.
 
-
 ## Content
 * Content for the website was obtained from https://heycreativemindstudio.mykajabi.com/inrekraftonlinekurs and https://quaifeassociates.vipmembervault.com/. 
 
 ## Media
-* All images were obtained from https://pixabay.com.
+* All images were obtained from <a href="https://pixabay.com">Pixabay</a>.
 
 ## Acknowledgements
 * My mentor for support, advice and feedback.
 * The students on Slack for peer review and comments.
 * Code Institute Tutor support for help with coding issues.
-* My family for their endless support, feedback and testing.
+* My family and friends for their support, feedback and testing.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
