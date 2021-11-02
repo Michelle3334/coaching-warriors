@@ -1,3 +1,4 @@
+"""Forms for booking app"""
 from django import forms
 from phonenumber_field.formfields import PhoneNumberField
 from course.models import Course
@@ -5,6 +6,7 @@ from coaches.models import Coach
 
 
 class BookingForm(forms.Form):
+    """Booking form to register for a course"""
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
     email_address = forms.EmailField(required=True)

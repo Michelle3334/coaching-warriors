@@ -110,6 +110,7 @@ Images were sourced from pixabay.com.
    * Featured on all pages is a fully responsive navigation bar that has links to all pages (Home, Gallery, Contact and About).
    * If the user is not logged in then there are an additional two pages available (Register and Login).
    * If the user is logged in then there is an additional link to allow the user to Logout.
+   * A confirmation message displays when the user logs in or logs out.
     <img src="media/images/login.PNG"> 
     <img src="media/images/logout.PNG"> 
 
@@ -164,8 +165,6 @@ Images were sourced from pixabay.com.
 * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 ### Github
 * GitHub is used to store the projects code after being pushed from Git.
-### Google Fonts
-* Google Fonts was used to import fonts.
 ### Balsamiq
 * Balsamiq was used to create the wireframes during the design process.
 
@@ -179,12 +178,16 @@ Images were sourced from pixabay.com.
 
 
 ## Code Validation
-1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.
+**1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.**
 
-    * Screenshot of css validation 
-    <img src="media/images/css_valid.PNG">
+No errors were found in the style.css
+<img src="media/images/css_valid.PNG">
 
+**2. Django testing framework was used to test the html**
 
+**3. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
+
+All Python files were tested, with no errors found.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -208,8 +211,10 @@ Screenshots of the final test are presented below:
 * Mobile
     * Home page
     <img src="media/images/mobile_lighthouse_home.PNG">
+    
     * Gallery
     <img src="media/images/mobile_lighthouse_gallery.PNG">
+    
     * About page
     <img src="media/images/mobile_lighthouse_about.PNG">
 

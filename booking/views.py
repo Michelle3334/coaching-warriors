@@ -1,3 +1,4 @@
+"""Views for booking app"""
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -8,6 +9,7 @@ from .forms import BookingForm
 
 
 def booking(request):
+    """Booking app view for submission of form"""
     if request.method == 'GET':
         form = BookingForm()
     else:
