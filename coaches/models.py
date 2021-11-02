@@ -1,3 +1,4 @@
+"""Database Models for Coaches app"""
 from django.db import models
 from cloudinary.models import CloudinaryField
 
@@ -6,6 +7,7 @@ STATUS = ((0, "Inactive"), (1, "Active"))
 
 
 class Coach(models.Model):
+    """Model for Coach"""
     coach_name = models.CharField(
         primary_key=True, max_length=200, unique=True)
     email = models.EmailField()
@@ -15,6 +17,7 @@ class Coach(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
+        """Meta class for ordering"""
         ordering = ['coach_name']
 
     def __str__(self):
