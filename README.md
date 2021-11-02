@@ -198,8 +198,10 @@ Screenshots of the final test are presented below:
 * Desktop
     * Home page
     <img src="media/images/desktop_lighthouse_home.PNG">
+    
     * Gallery
     <img src="media/images/desktop_lighthouse_gallery.PNG">
+    
     * About page
     <img src="media/images/desktop_lighthouse_about.PNG">
 
