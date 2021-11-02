@@ -13,7 +13,6 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 1. [UX](https://github.com/Michelle3334/coaching-warriors#ux)
     * [Website owner goals](https://github.com/Michelle3334/coaching-warriors#website-owner-business-goals)
     * [User stories](https://github.com/Michelle3334/coaching-warriors#user-stories)
-    * [Structure](https://github.com/Michelle3334/coaching-warriors#structure-of-the-website)
     * [Wireframes](https://github.com/Michelle3334/coaching-warriors#wireframes)
     * [Surface](https://github.com/Michelle3334/coaching-warriors#surface)
 2. [Features](https://github.com/Michelle3334/coaching-warriors#features)
@@ -47,9 +46,6 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 * I would like to get in contact with the website owner and provide comments or feedback.
 * I would like to view the available courses.
 * I would like to be able to register for a course.
-
-## Structure of the website
-The website is designed to be user-friendy on all device sizes.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -187,7 +183,8 @@ No errors were found in the style.css
 
 **3. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
 
-All Python files were tested, with no errors found.
+All Python files were tested with PEP8, with no errors found.
+There were some pylint errors in gitpod regarding missing docstrings, these errors were fixed during development.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -222,10 +219,21 @@ Screenshots of the final test are presented below:
 
 ## User Stories testing
 ### As a new user:
+* I want to find information about the various courses.
+* I want to read information about the coach.
+* I want to register on the website.
 
 ### As a returning user:
+* I would like to get in contact with the website owner and provide comments or feedback.
+* I would like to view the available courses.
+* I would like to be able to register for a course.
 
 ### As a website owner:
+* I want my visitors to be able to navigate my website intuitively and easily.
+* I would like the website to be interesting for visitors.
+* I would like to build and maintain relationships with potential and current visitors.
+* I would like to manage the information about the various courses.
+* I would like to be able to add draft courses so that I can finish writing the content later.
 
 ## Known Bugs
 
