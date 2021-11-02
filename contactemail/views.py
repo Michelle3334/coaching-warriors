@@ -1,3 +1,4 @@
+"""Views for contactemail app"""
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -6,6 +7,7 @@ from .forms import ContactForm
 
 
 def contact(request):
+    """Contactemail app view for submission of form"""
     if request.method == 'GET':
         form = ContactForm()
     else:
