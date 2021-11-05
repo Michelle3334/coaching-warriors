@@ -20,7 +20,8 @@ class TestBookingForm(TestCase):
             'last_name': 'Doe',
             'email_address': 'jdoe@gmail.com',
             'telephone': '0112223333',
-            'course': 'Course1',
-            'coach': 'Coach2',
-            'date': '12/10/2021'})
+            'course': 'Ways of building your own resilience',
+            'coach': 'Ann Thompson',
+            'date': '2021-10-12',
+            'additional_information': ''})
         self.assertTrue(form.is_valid())
