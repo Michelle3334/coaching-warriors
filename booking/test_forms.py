@@ -63,5 +63,13 @@ class TestBookingForm(TestCase):
 
     def test_additional_information_field_is_not_required(self):
         """Test additional information field is not required"""
-        form = BookingForm({'additional_information': ''})
+        form = BookingForm({
+            'first_name': 'Jane',
+            'last_name': 'Doe',
+            'email_address': 'jdoe@gmail.com',
+            'telephone': '0112223333',
+            'course': 'Ways of building your own resilience',
+            'coach': 'Ann Thompson',
+            'date': '2021-12-11',
+            'additional_information': ''})
         self.assertTrue(form.is_valid())
