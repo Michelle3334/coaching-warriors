@@ -54,12 +54,12 @@ class TestBookingForm(TestCase):
             'course'][0], 'This field is required.')
 
     def test_date_is_required(self):
-        """Test if course required"""
-        form = BookingForm({'date': ''})
+        """Test if date required"""
+        form = BookingForm({'requested_date': ''})
         self.assertFalse(form.is_valid())
-        self.assertIn('date', form.errors.keys())
+        self.assertIn('requested_date', form.errors.keys())
         self.assertEqual(form.errors[
-            'date'][0], 'This field is required.')
+            'requested_date'][0], 'This field is required.')
 
     def test_additional_information_field_is_not_required(self):
         """Test additional information field is not required"""

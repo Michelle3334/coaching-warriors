@@ -4,5 +4,4 @@ from . import views
 
 urlpatterns = [
     path('about/', views.CoachList.as_view(), name='about'),
-    path('summernote/', include('django_summernote.urls')),
 ]
