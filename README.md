@@ -264,21 +264,29 @@ Screenshots of the final test are presented below:
 3. I would like to be able to register for a course.
     * Users can book a course using the 'Booking' link provided in the navigation bar or via a link at the bottom of the course detail page.
 
-    <img src="media/images/booking.PNG">
     <img src="media/images/booking_link.PNG">
 
 ### As a website owner:
 1. I want my visitors to be able to navigate my website intuitively and easily.
     * The navigation bar is displayed at the top of all pages for easy navigation and access.
 
-    <img src="media/images/logout.PNG">
-
 2. I would like the website to be interesting for visitors.
-    
+    * The home page has course information and the about page provides interesting information for visitors about coaching and concepts
+
+    <img src="media/images/about_info.PNG">
 
 3. I would like to build and maintain relationships with potential and current visitors.
+    * Users can register on the site and send messages via the contact form as well as the booking form.
+
 4. I would like to manage the information about the various courses.
+    * The admin panel allows the website owner to amend and update course information.
+
+    <img src="media/images/admin_course.PNG">
+
 5. I would like to be able to add draft courses so that I can finish writing the content later.
+    * The website owner can add a draft course which will not be published to the site until the status is changed to published.
+
+    <img src="media/images/course_status.PNG">
 
 ## Known Bugs
 
