@@ -138,7 +138,7 @@ Images were sourced from pixabay.com.
     <img src="media/images/contact.PNG">
 
 ## Future features
-* A Calendar on the booking form page that shows available days for booking.
+* A Calendar on the booking form page that links to the gmail calendar and shows which days are available for booking.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -160,7 +160,7 @@ Images were sourced from pixabay.com.
 ### Git
 * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 ### Github
-* GitHub is used to store the projects code after being pushed from Git.
+* GitHub was used to store the projects code after being pushed from Git.
 ### Balsamiq
 * Balsamiq was used to create the wireframes during the design process.
 
@@ -170,8 +170,7 @@ Images were sourced from pixabay.com.
 ## Functionality Testing
 * I used Google Chrome developer tools throughout the development process for testing and solving problems with style and display issues.
 * All links were tested multiple times during the development process to ensure that all pages were linked correctly.
-* Form elements were tested to ensure that they work as they should, with user feedback on error and successful submission.
-
+* Form elements were tested to ensure that they work as they should, with user feedback on errors as well as successful submission.
 
 ## Code Validation
 **1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.**
