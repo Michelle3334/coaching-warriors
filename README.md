@@ -117,7 +117,7 @@ Images were sourced from pixabay.com.
 ### Available Courses section
    * On the home page the available courses are displayed, with a short description.
    * The images are responsive when the user scrolls over an image.
-   * If the user clicks on a specific course they can view the full description of the course information.
+   * If the user clicks on a specific course they can view the full description of the course information. At the bottom of the course detail page is a link to the booking page.
 
 <img src="media/images/course.PNG">  
 
@@ -179,12 +179,27 @@ Images were sourced from pixabay.com.
 No errors were found in the style.css
 <img src="media/images/css_valid.PNG">
 
-**2. Django testing framework was used to test the html**
+**2. Django testing framework was used to test the forms, views and models in all four apps**
+    
+* Booking app
+
+* Coaches app
+
+<img src="media/images/coaches_test.PNG">
+
+* Contactemail app
+
+* Course app
 
 **3. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
 
 All Python files were tested with PEP8, with no errors found.
 There were some pylint errors in gitpod regarding missing docstrings, these errors were fixed during development.
+
+**4. <a href="https://beautifytools.com/javascript-validator.php">Beautify Tools</a> was used to test the Javascript snippets.**
+
+No errors were found in the Javascript snippets.
+
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -219,21 +234,51 @@ Screenshots of the final test are presented below:
 
 ## User Stories testing
 ### As a new user:
-* I want to find information about the various courses.
-* I want to read information about the coach.
-* I want to register on the website.
+1. I want to find information about the various courses.
+    * Users can do this on the home page, if they want more detailed information they can click on the course they are interested in and find more information.
+
+    <img src="media/images/course.PNG">
+    <img src="media/images/course_detail.PNG">
+
+2. I want to read information about the coach.
+    * The user can find information about the coach on the 'About' page.
+
+    <img src="media/images/coach_about.PNG">
+
+3. I want to register on the website.
+    * Users can register using the register link.
+
+    <img src="media/images/register.PNG">
 
 ### As a returning user:
-* I would like to get in contact with the website owner and provide comments or feedback.
-* I would like to view the available courses.
-* I would like to be able to register for a course.
+1. I would like to get in contact with the website owner and provide comments or feedback.
+    * Users can submit comments or feedback via the contact us form
+
+    <img src="media/images/contact.PNG">
+
+2. I would like to view the available courses.
+    * Users can do this on the home page.
+
+    <img src="media/images/course.PNG">
+
+3. I would like to be able to register for a course.
+    * Users can book a course using the 'Booking' link provided in the navigation bar or via a link at the bottom of the course detail page.
+
+    <img src="media/images/booking.PNG">
+    <img src="media/images/booking_link.PNG">
 
 ### As a website owner:
-* I want my visitors to be able to navigate my website intuitively and easily.
-* I would like the website to be interesting for visitors.
-* I would like to build and maintain relationships with potential and current visitors.
-* I would like to manage the information about the various courses.
-* I would like to be able to add draft courses so that I can finish writing the content later.
+1. I want my visitors to be able to navigate my website intuitively and easily.
+    * The navigation bar is displayed at the top of all pages for easy navigation and access.
+
+    <img src="media/images/logout.PNG">
+
+2. I would like the website to be interesting for visitors.
+    
+
+3. I would like to build and maintain relationships with potential and current visitors.
+4. I would like to manage the information about the various courses.
+5. I would like to be able to add draft courses so that I can finish writing the content later.
 
 ## Known Bugs
 
