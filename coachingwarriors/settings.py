@@ -39,6 +39,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 # Application definition
 
 INSTALLED_APPS = [
