@@ -288,8 +288,19 @@ Screenshots of the final test are presented below:
 
     <img src="media/images/course_status.PNG">
 
-## Known Bugs
+## Bugs
 
+* **Summernote was not working in Heroku**
+
+    **Fix:** <code>X_FRAME_OPTIONS = 'SAMEORIGIN'</code> needed to be added to the settings.py file.
+
+* **Coach information view was not working**
+
+    **Fix:** Changed the order of the url paths in the coaching warriors urls.py.
+
+* **Error running django tests on postgres database in Heroku**
+
+    **Fix:** Created a local database to run the django tests against. As the Heroku app is using a free version I was unable to create permissions for access to the Postgres database.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
