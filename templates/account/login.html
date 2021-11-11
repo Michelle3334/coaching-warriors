@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<!--Welcome Image-->
+<div class="card bg-dark text-white rounded-0">
+  <img src="https://res.cloudinary.com/dqf94syyp/image/upload/v1628843240/welcome_rsawl8.jpg" class="img-fluid max-width: 100% height: auto" alt="Welcome mat">
+</div>
+<div class="container align-items-center">
+  <div class="row">
+    <div class="text-center mt-4">
+      <h2>{% trans "Sign In" %}</h2>
+
+      <p>{% blocktrans %}Welcome back to Coaching Warriors. <br>If you have not created an account yet, then please 
+        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-center">
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-dark text-center m-2" type="submit">{% trans "Sign In" %}</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
