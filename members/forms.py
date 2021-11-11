@@ -16,6 +16,7 @@ class ProfileForm(UserChangeForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
+        """Meta class"""
         model = User
         fields = (
             'username',

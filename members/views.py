@@ -1,9 +1,9 @@
 """Views for Member profile view"""
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.views import generic
-from django.contrib.auth.forms import UserChangeForm
+# from django.contrib.auth.forms import UserChangeForm
 from .forms import ProfileForm
-from django.contrib import messages
+# from django.contrib import messages
 # from django.urls import reverse_lazy
 
 
