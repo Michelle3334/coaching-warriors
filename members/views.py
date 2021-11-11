@@ -1,12 +1,18 @@
 """Views for Member profile view"""
-from django.shortcuts import render, redirect
-from django.views import generic
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib import messages
-from django.urls import reverse_lazy
+from django.shortcuts import render
+from django.views import generic, View
+from django.views.generic import TemplateView
+# from django.contrib import messages
+# from django.urls import reverse_lazy
+from .forms import ProfileForm
 
 
-class MemberRegisterView(generic.CreateView):
-    form_class = UserCreationForm
-    template_name = 'signup.html'
-    success_url = reverse_lazy('home')
+class MemberViewProfile(TemplateView):
+    """Member profile page view"""
+    form = ProfileForm()
+    template_name = 'profile.html'
+
+    def about(self, request):
+        """Return render view for member view profile page"""
+        form = ProfileForm()
+        return render(request, 'profile.html', {'form': form})

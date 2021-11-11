@@ -1,8 +1,8 @@
 """URL paths for members app"""
 from django.urls import path
-from .views import MemberRegisterView
+from . import views
 
 
 urlpatterns = [
-    path('signup/', MemberRegisterView.as_view(), name='signup'),
+    path('members/', views.MemberViewProfile.as_view(), name='members'),
 ]
