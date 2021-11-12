@@ -29,6 +29,7 @@
                 <td> {{ booking.booking_date }} </td>
                 <td> {{ booking.course_name }} </td>
                 <td> {{ booking.coach_name }} </td>
+                <td><a href="{% url 'edit_booking' booking.pk %}"><small>Edit</small></a></td>
             </tr>
             {% endfor %}
         </table>

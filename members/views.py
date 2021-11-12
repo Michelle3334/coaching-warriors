@@ -2,6 +2,7 @@
 # from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.views import PasswordChangeView
+from django.views.generic import UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import ProfileForm, PasswordEditForm
@@ -33,3 +34,10 @@ class BookingView(generic.ListView):
         user = self.request.user
         booking_list = Booking.objects.filter(user=user)
         return booking_list
+
+
+class EditBooking(UpdateView):
+    """Edit booking view"""
+    model = Booking
+    template_name = 'edit_booking.html'
+    fields = ['booking_date', 'course_name', 'coach_name']
