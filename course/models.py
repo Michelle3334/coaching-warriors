@@ -21,4 +21,4 @@ class Course(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.course_name
+        return str(self.course_name)

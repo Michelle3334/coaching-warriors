@@ -21,4 +21,4 @@ class Coach(models.Model):
         ordering = ['coach_name']
 
     def __str__(self):
-        return self.coach_name
+        return str(self.coach_name)
