@@ -18,13 +18,13 @@ class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
 class MemberViewProfile(generic.UpdateView):
     """View and update user profile"""
     form_class = ProfileForm
-    model = Booking
     template_name = 'profile.html'
 
     def get_object(self):
         return self.request.user
 
-# class BookingView(generic.ListView):
-#    """Booking list view"""
-#    model = Booking
-#    template_name = 'profile.html'
+
+class BookingView(generic.ListView):
+    """Booking list view"""
+    model = Booking
+    template_name = 'member_booking.html'

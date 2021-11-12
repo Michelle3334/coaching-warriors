@@ -14,19 +14,13 @@
       </div>
   </div>
 </div>
-<h2 class="text-center mt-5">My profile</h2>
-<!--User Profile-->
-<div class="container col-5">
-  <form id="form" method="post" class="mt-3">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="text-center">
-      <button data-toggle="modal" data-target="message" type="submit" class="btn btn-dark text-center m-2">Update Profile</button>
-    </div>
-  </form>
-</div>
+<h2 class="text-center mt-5">Your bookings</h2>
 <!--View booked courses-->
 <div class="text-center">
-  <h4><a href="{% url 'member_booking' %}" class="course-link"><u>Click here to view your booked courses</u></a></h4>
+    {% for booking in booking_list %}
+        <p> {{ booking.booking_date }} </p>
+        <p> {{ booking.course_name }} </p>
+        <p> {{ booking.coach_name }} </p>
+    {% endfor %}
 </div>
 {% endblock content%}
