@@ -16,11 +16,22 @@
 </div>
 <h2 class="text-center mt-5">Your bookings</h2>
 <!--View booked courses-->
-<div class="text-center">
-    {% for booking in booking_list %}
-        <p> {{ booking.booking_date }} </p>
-        <p> {{ booking.course_name }} </p>
-        <p> {{ booking.coach_name }} </p>
-    {% endfor %}
+<div class="container d-flex justify-content-center">
+    <div class="row col-8">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Course</th>
+                <th>Coach</th>
+            </tr>
+            {% for booking in booking_list %}
+            <tr>
+                <td> {{ booking.booking_date }} </td>
+                <td> {{ booking.course_name }} </td>
+                <td> {{ booking.coach_name }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
 {% endblock content%}
