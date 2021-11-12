@@ -1,6 +1,7 @@
 """Database models for members to book a course"""
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from coaches.models import Coach
 from course.models import Course
 
@@ -18,3 +19,7 @@ class Booking(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+    def get_absolute_url(self):
+        """URL to return to on edit"""
+        return reverse('member_booking')
