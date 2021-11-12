@@ -1,7 +1,7 @@
 """URL paths for members app"""
 from django.urls import path
 from . import views
-from .views import PasswordsChangeView, EditBooking, DeleteBooking
+from .views import PasswordsChangeView, CreateBookingView, EditBooking, DeleteBooking
 
 
 urlpatterns = [
@@ -16,4 +16,7 @@ urlpatterns = [
     path(
         'member_booking/<int:pk>/delete',
         DeleteBooking.as_view(), name="delete_booking"),
+    path(
+        'create_booking/',
+        CreateBookingView.as_view(), name="create_booking"),
 ]

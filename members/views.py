@@ -2,7 +2,7 @@
 # from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.views import PasswordChangeView
-from django.views.generic import UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 # from coaches.models import Coach
@@ -36,6 +36,13 @@ class BookingView(generic.ListView):
         user = self.request.user
         booking_list = Booking.objects.filter(user=user)
         return booking_list
+
+
+class CreateBookingView(CreateView):
+    """Create new booking view"""
+    model = Booking
+    template_name = 'create_booking.html'
+    fields = ['booking_date', 'course_name', 'coach_name', 'user']
 
 
 class EditBooking(UpdateView):
