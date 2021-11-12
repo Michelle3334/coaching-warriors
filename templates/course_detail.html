@@ -23,7 +23,7 @@
     {% if user.is_authenticated %}
     <h3><a href="{% url 'member_booking' %}" class="course-link"><u>Click here view your bookings</u></a></h3>
     {% else %}
-    <h3><a href="{% url 'booking' %}" class="course-link"><u>Click here to send a booking request</u></a></h3>
+    <h3><a href="{% url 'booking' %}"><u>Click here to send a booking request</u></a></h3>
     {% endif %}
 </div>
 {%endblock%}
