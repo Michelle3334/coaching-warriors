@@ -1,16 +1,16 @@
 """Views for Member profile view"""
-from django.shortcuts import render
+# from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from .forms import ProfileForm
+from .forms import ProfileForm, PasswordEditForm
 
 
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     """View for changing password"""
-    form_class = PasswordChangeForm
+    form_class = PasswordEditForm
     success_message = 'Password changed successfully!'
     success_url = reverse_lazy('home')
 
