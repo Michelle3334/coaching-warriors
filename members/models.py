@@ -9,8 +9,10 @@ from course.models import Course
 class Booking(models.Model):
     """Model for member booking"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    course_name = models.ForeignKey(Course, on_delete=models.CASCADE)
-    coach_name = models.ForeignKey(Coach, on_delete=models.CASCADE)
+    course_name = models.ForeignKey(
+        Course, on_delete=models.CASCADE, limit_choices_to={'status': '1'})
+    coach_name = models.ForeignKey(
+        Coach, on_delete=models.CASCADE, limit_choices_to={'status': '1'})
     booking_date = models.DateField(unique=True)
 
     class Meta:
