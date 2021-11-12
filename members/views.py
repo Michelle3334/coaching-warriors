@@ -28,3 +28,8 @@ class BookingView(generic.ListView):
     """Booking list view"""
     model = Booking
     template_name = 'member_booking.html'
+
+    def get_queryset(self):
+        user = self.request.user
+        booking_list = Booking.objects.filter(user=user)
+        return booking_list
