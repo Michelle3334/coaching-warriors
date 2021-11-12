@@ -20,6 +20,10 @@
     {{ course.content | safe }}
 </div>
 <div class="text-center">
+    {% if user.is_authenticated %}
+    <h3><a href="#" class="course-link"><u>Click here view your bookings</u></a></h3>
+    {% else %}
     <h3><a href="{% url 'booking' %}" class="course-link"><u>Click here to send a booking request</u></a></h3>
+    {% endif %}
 </div>
 {%endblock%}
