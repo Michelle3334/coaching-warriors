@@ -1,7 +1,7 @@
 """URL paths for members app"""
 from django.urls import path
 from . import views
-from .views import PasswordsChangeView, EditBooking
+from .views import PasswordsChangeView, EditBooking, DeleteBooking
 
 
 urlpatterns = [
@@ -13,4 +13,7 @@ urlpatterns = [
     path(
         'member_booking/edit/<int:pk>',
         EditBooking.as_view(), name="edit_booking"),
+    path(
+        'member_booking/<int:pk>/delete',
+        DeleteBooking.as_view(), name="delete_booking"),
 ]

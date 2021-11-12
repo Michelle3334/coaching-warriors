@@ -2,9 +2,11 @@
 # from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.views import PasswordChangeView
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+# from coaches.models import Coach
+# from course.models import Course
 from .forms import ProfileForm, PasswordEditForm
 from .models import Booking
 
@@ -41,3 +43,11 @@ class EditBooking(UpdateView):
     model = Booking
     template_name = 'edit_booking.html'
     fields = ['booking_date', 'course_name', 'coach_name']
+
+
+class DeleteBooking(DeleteView):
+    """Delete booking"""
+    model = Booking
+    template_name = 'delete_booking.html'
+    success_message = 'Booking deleted successfully!'
+    success_url = reverse_lazy('member_booking')
