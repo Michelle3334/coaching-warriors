@@ -4,18 +4,15 @@ from django.views import generic
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 from .forms import ProfileForm
 
 
-class PasswordsChangeView(PasswordChangeView):
+class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     """View for changing password"""
     form_class = PasswordChangeForm
-    success_url = reverse_lazy('password_success')
-
-
-def password_success(request):
-    """Success message for password change"""
-    return render(request, 'password_success.html', {})
+    success_message = 'Password changed successfully!'
+    success_url = reverse_lazy('home')
 
 
 class MemberViewProfile(generic.UpdateView):
