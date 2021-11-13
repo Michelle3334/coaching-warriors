@@ -3,22 +3,28 @@
 {% block head_title %}Delete Booking{% endblock %}
 
 {% block content %}
-<div class="container align-items-center">
-  <div class="row">
-    <div class="text-center mt-4">
-      <h2>Delete Booking</h2>
+{% if user.is_authenticated %}
+  <div class="container align-items-center">
+    <div class="row">
+      <div class="text-center mt-4">
+        <h2>Delete Booking</h2>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-4 offset-md-4">
+        <form method="POST">
+          {% csrf_token %}
+          <div class="text-center">
+              <strong>Are you sure you want to delete your booking?</strong>
+              <button class="btn btn-dark text-center m-2" type="submit">Delete Booking</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-md-4 offset-md-4">
-      <form method="POST">
-        {% csrf_token %}
-        <div class="text-center">
-            <strong>Are you sure you want to delete your booking?</strong>
-            <button class="btn btn-dark text-center m-2" type="submit">Delete Booking</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+{% else %}
+
+<h1 class="text-center mt-3">You need to Login to view this page!</h1>
+
+{% endif %}
 {% endblock %}
