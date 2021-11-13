@@ -2,6 +2,7 @@
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
+# from .models import Booking
 
 
 class ProfileForm(UserChangeForm):

@@ -41,6 +41,7 @@ class BookingView(generic.ListView):
 class CreateBookingView(CreateView):
     """Create new booking view"""
     model = Booking
+    # form_class = CreateBookingForm
     template_name = 'create_booking.html'
     fields = ['booking_date', 'course_name', 'coach_name', 'user']
 
