@@ -380,6 +380,7 @@ Before creating a Heroku app make sure your project has these two files:
 # Credits
 ## Code
 * All code was written by the developer.
+* Codemy's Create blog <a href="https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi">tutorials</a> was used for explanations and clarity on django forms and authentication. 
 
 ## Content
 * Content for the website was obtained from https://heycreativemindstudio.mykajabi.com/inrekraftonlinekurs and https://quaifeassociates.vipmembervault.com/. 
