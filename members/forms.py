@@ -2,7 +2,7 @@
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
-# from .models import Booking
+from .models import Booking
 
 
 class ProfileForm(UserChangeForm):
@@ -47,4 +47,24 @@ class PasswordEditForm(PasswordChangeForm):
             'old_password',
             'new_password1',
             'new_password1',
+            )
+
+
+class CreateBookingForm(forms.ModelForm):
+    """Create new booking form"""
+    booking_date = forms.DateField(
+        widget=forms.TextInput(attrs={'type': 'date', 'class': 'form-control'}))
+    # course_name = forms.CharField(
+    #    widget=forms.Select(attrs={'class': 'form-control'}))
+    # coach_name = forms.CharField(
+    #    widget=forms.Select(attrs={'class': 'form-control'}))
+    
+    class Meta:
+        """Meta class"""
+        model = User
+        model = Booking
+        fields = (
+            'booking_date',
+            'course_name',
+            'coach_name',
             )
