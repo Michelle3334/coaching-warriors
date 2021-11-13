@@ -53,7 +53,8 @@ class PasswordEditForm(PasswordChangeForm):
 class CreateBookingForm(forms.ModelForm):
     """Create new booking form"""
     booking_date = forms.DateField(
-        widget=forms.TextInput(attrs={'type': 'date', 'class': 'form-control'}))
+        widget=forms.TextInput(attrs={
+            'type': 'date', 'class': 'form-control'}))
     # course_name = forms.CharField(
     #    widget=forms.Select(attrs={'class': 'form-control'}))
     # coach_name = forms.CharField(

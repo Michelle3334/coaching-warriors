@@ -2,7 +2,7 @@
 # from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.views import PasswordChangeView
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
