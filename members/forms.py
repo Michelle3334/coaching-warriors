@@ -58,7 +58,7 @@ class CreateBookingForm(forms.ModelForm):
     #    widget=forms.Select(attrs={'class': 'form-control'}))
     # coach_name = forms.CharField(
     #    widget=forms.Select(attrs={'class': 'form-control'}))
-    
+
     class Meta:
         """Meta class"""
         model = User
