@@ -106,8 +106,8 @@ Images were sourced from pixabay.com.
 ## Existing Features
 ### Navigation Bar
    * Featured on all pages is a fully responsive navigation bar that has links to all pages (Home, Gallery, Contact and About).
-   * If the user is not logged in then there are an additional two pages available (Register and Login).
-   * If the user is logged in then there is an additional link to allow the user to Logout.
+   * If the user is not logged in then there are three additional links available available (Register, Login and Booking).
+   * If the user is logged in then the Register, Login and Booking links no longer display. The user can now Logout or view their Profile.
    * A confirmation message displays when the user logs in or logs out.
     <img src="media/images/login.PNG"> 
     <img src="media/images/logout.PNG"> 
