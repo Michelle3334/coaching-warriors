@@ -53,6 +53,8 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 
 ## Wireframes
 I used Balsamiq to create the wireframes.
+Wireframes were not created for the Profile/View course pages as the basic design would be similar to other form styled pages.
+
 * Home page 
 <img src="media/images/Home_page (desktop).PNG" >
 
@@ -140,7 +142,7 @@ Images were sourced from pixabay.com.
     <img src="media/images/contact.PNG">
 
 ## Future features
-* A Calendar on the booking form page that links to the gmail calendar and shows which days are available for booking.
+* A Calendar on the booking form which shows which days are available for booking.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -251,8 +253,7 @@ Screenshots of the final test are presented below:
 
 3. I want to register on the website.
     * Users can register using the register link.
-
-    <img src="media/images/register.PNG">
+    <img src="media/images/register.PNG" width=200 height=200>
 
 ### As a returning user:
 1. I would like to get in contact with the website owner and provide comments or feedback.
