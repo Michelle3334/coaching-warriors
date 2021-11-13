@@ -253,7 +253,7 @@ Screenshots of the final test are presented below:
 
 3. I want to register on the website.
     * Users can register using the register link.
-    <img src="media/images/register.PNG" width=400 height=300>
+    <img src="media/images/register.PNG">
 
 ### As a returning user:
 1. I would like to get in contact with the website owner and provide comments or feedback.
