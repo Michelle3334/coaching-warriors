@@ -14,13 +14,13 @@
       </div>
   </div>
 </div>
-<h2 class="text-center mt-5">Contact Us</h2>
-<p class="text-center mt-5">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
-<p class="text-center small">We will never share your details with anyone.</p>
+<h2 class="text-center mt-3">Contact Us</h2>
+<p class="text-center mt-2 mb-1">Feel free to ask a question, give us some feedback or pop us a message just to chat!</p>
+<p class="text-center small"><em>We will never share your details with anyone.</em></p>
 
 <!--Contact form-->
 <div class="container col-6">
-  <form id="form" method="post" class="mt-5">
+  <form id="form" method="post" class="mt-2">
       {% csrf_token %}
       {{ form|crispy }}
       <div class="text-center">
