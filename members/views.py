@@ -2,6 +2,7 @@
 # from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.models import User
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
@@ -43,7 +44,11 @@ class CreateBookingView(CreateView):
     model = Booking
     # form_class = CreateBookingForm
     template_name = 'create_booking.html'
-    fields = ['booking_date', 'course_name', 'coach_name', 'user']
+    fields = ['booking_date', 'course_name', 'coach_name']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(CreateBookingView, self).form_valid(form)
 
 
 class EditBooking(UpdateView):
