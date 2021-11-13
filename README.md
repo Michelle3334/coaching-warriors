@@ -46,6 +46,8 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 * I would like to get in contact with the website owner and provide comments or feedback.
 * I would like to view the available courses.
 * I would like to be able to register for a course.
+* I would like to view the courses I have registered for.
+* I would like to be able to edit and delete courses I have registered for.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -151,6 +153,9 @@ Images were sourced from pixabay.com.
 
 ### Coaches app
 <img src="media/images/coaches_dbm.PNG">
+
+### Members app for booking courses
+<img src="media/images/booking_dbm.PNG">
 
 # Technologies Used:
 ### Programming Languages:
@@ -261,9 +266,19 @@ Screenshots of the final test are presented below:
     <img src="media/images/course.PNG">
 
 3. I would like to be able to register for a course.
-    * Users can book a course using the 'Booking' link provided in the navigation bar or via a link at the bottom of the course detail page.
+    * Logged in users can create a booking from the view courses page accessed from their profile.
 
-    <img src="media/images/booking_link.PNG">
+    <img src="media/images/create_booking.PNG">
+
+4. I would like to view the courses I have registered for.
+    * Logged in users can view their courses from the link at the bottom of the course detail page or from their profile page.
+
+    <img src="media/images/user_booking_link.PNG">
+
+    <img src="media/images/view_booking.PNG">
+
+5. I would like to be able to edit and delete courses I have registered for.
+    * Logged in users can edit or delete their bookings from the view bookings page.
 
 ### As a website owner:
 1. I want my visitors to be able to navigate my website intuitively and easily.
