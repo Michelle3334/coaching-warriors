@@ -33,5 +33,9 @@ def booking(request):
                     'coachingwar@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+        else:
+            messages.error(
+                request, "Form not submitted. Please correct any errors")
+            return render(request, 'booking.html', {'form': form})
     form = BookingForm()
     return render(request, "booking.html", {'form': form})
