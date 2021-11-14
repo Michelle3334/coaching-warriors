@@ -27,5 +27,9 @@ def contact(request):
                     'coachingwar@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+        else:
+            messages.error(
+                request, "Form not submitted. Please correct any errors")
+            return render(request, 'contact.html', {'form': form})
     form = ContactForm()
     return render(request, "contact.html", {'form': form})
