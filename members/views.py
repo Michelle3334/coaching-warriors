@@ -16,7 +16,7 @@ class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     """View for changing password"""
     form_class = PasswordEditForm
     success_message = 'Password changed successfully!'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('members')
 
 
 class MemberViewProfile(generic.UpdateView):
