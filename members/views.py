@@ -47,7 +47,8 @@ class MemberViewProfile(generic.UpdateView):
     """View and update user profile"""
     form_class = ProfileForm
     template_name = 'profile.html'
-    success_url = reverse_lazy('members')
+    success_message = 'Profile updated successfully!'
+    success_url = reverse_lazy('home')
 
     def get_object(self):
         return self.request.user
