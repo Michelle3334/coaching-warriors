@@ -27,6 +27,12 @@ body {
     margin-bottom: 1.5em;
 }
 
+/**Error messages**/
 ul.errorlist {
     color: red;
 }
+
+/**Table style**/
+table, th, td {
+    border: 1px solid black;
+  }
