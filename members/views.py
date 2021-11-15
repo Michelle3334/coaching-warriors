@@ -18,12 +18,19 @@ class UserRegisterView(generic.CreateView):
     template_name = 'account/signup.html'
     success_url = reverse_lazy('home')
 
+    def save(self, request):
+        user = super(UserRegisterForm. self).save(request)
+        return user
+
 
 class UserLoginView(generic.CreateView):
     """User login view"""
     form_class = UserLoginForm
     template_name = 'account/login.html'
     success_url = reverse_lazy('home')
+
+    def login(self, *args, **kwargs):
+        return super(UserLoginForm, self).login(*args, **kwargs)
 
 
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
