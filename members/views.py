@@ -79,8 +79,8 @@ class CreateBookingView(CreateView):
 class EditBooking(UpdateView):
     """Edit booking view"""
     model = Booking
+    form_class = CreateBookingForm
     template_name = 'edit_booking.html'
-    fields = ['booking_date', 'course_name', 'coach_name']
 
 
 class DeleteBooking(DeleteView):
