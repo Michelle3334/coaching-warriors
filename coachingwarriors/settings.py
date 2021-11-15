@@ -112,7 +112,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
 
 # User Form settings
-ACCOUNT_FORMS = {'signup': 'members.forms.RegisterForm'}
+ACCOUNT_FORMS = {
+    'signup': 'members.forms.UserRegisterForm',
+    'login': 'members.forms.UserLoginForm',
+    }
 
 # Email settings
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

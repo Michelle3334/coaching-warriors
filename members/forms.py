@@ -1,12 +1,12 @@
 """Forms for Members"""
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
-from allauth.account.forms import SignupForm
 from django.contrib.auth.models import User
+from allauth.account.forms import SignupForm, LoginForm
 from django import forms
 from .models import Booking
 
 
-class RegisterForm(SignupForm):
+class UserRegisterForm(SignupForm):
     """Registration form"""
     class Meta:
         """Meta class"""
@@ -14,12 +14,26 @@ class RegisterForm(SignupForm):
         fields = ('username', 'email', 'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
-        super(RegisterForm, self).__init__(*args, **kwargs)
+        super(UserRegisterForm, self).__init__(*args, **kwargs)
 
         self.fields['username'].widget.attrs['class'] = 'form-control'
         self.fields['email'].widget.attrs['class'] = 'form-control'
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
+
+
+class UserLoginForm(LoginForm):
+    """Login form"""
+    class Meta:
+        """Meta class"""
+        model = User
+        fields = ('login', 'password')
+
+    def __init__(self, *args, **kwargs):
+        super(UserLoginForm, self).__init__(*args, **kwargs)
+
+        self.fields['login'].widget.attrs['class'] = 'form-control'
+        self.fields['password'].widget.attrs['class'] = 'form-control'
 
 
 class ProfileForm(UserChangeForm):
