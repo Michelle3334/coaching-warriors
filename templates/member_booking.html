@@ -33,7 +33,7 @@
                 <td><a href="{% url 'delete_booking' booking.pk %}"><small>Delete</small></a></td>
             </tr>
             {% empty %}
-                <p class="text-center">You have no courses booked. Click on the link below to add a booking.</p>
+                <p class="text-center" style="color:red"><em><strong>You have no booked courses . Click on the link below to add a booking.</strong></em></p>
             {% endfor %}
         </table>
     </div>
