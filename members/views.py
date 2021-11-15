@@ -70,7 +70,6 @@ class CreateBookingView(CreateView):
     model = Booking
     form_class = CreateBookingForm
     template_name = 'create_booking.html'
-    # fields = ['booking_date', 'course_name', 'coach_name']
 
     def form_valid(self, form):
         form.instance.user = self.request.user

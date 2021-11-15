@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
 from django import forms
 from allauth.account.forms import SignupForm, LoginForm, ChangePasswordForm
+from course.models import Course
+from coaches.models import Coach
 from .models import Booking
 
 
@@ -89,10 +91,14 @@ class CreateBookingForm(forms.ModelForm):
     booking_date = forms.DateField(
         widget=forms.TextInput(attrs={
             'type': 'date', 'class': 'form-control'}))
-    # course_name = forms.CharField(
-    #    widget=forms.Select(attrs={'class': 'form-control'}))
-    # coach_name = forms.CharField(
-    #    widget=forms.Select(attrs={'class': 'form-control'}))
+    course_name = forms.ModelChoiceField(
+        queryset=Course.objects.filter(status=1),
+        empty_label="(Please select a course)",
+        widget=forms.Select(attrs={'class': 'form-control'}))
+    coach_name = forms.ModelChoiceField(
+        queryset=Coach.objects.filter(status=1),
+        empty_label="(Please select a coach)",
+        widget=forms.Select(attrs={'class': 'form-control'}))
 
     class Meta:
         """Meta class"""
