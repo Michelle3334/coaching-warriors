@@ -1,5 +1,6 @@
 """Forms for Members"""
 from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.contrib.auth.models import User
 from django import forms
 from allauth.account.forms import SignupForm, LoginForm, ChangePasswordForm
