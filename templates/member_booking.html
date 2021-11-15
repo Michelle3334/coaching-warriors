@@ -18,20 +18,26 @@
 <!--View booked courses-->
 <div class="container d-flex justify-content-center">
     <div class="row col-8">
-        <table>
+        <table class="table table-sm">
             {% for booking in booking_list %}
-            <tr>
-                <th>Date</th>
-                <th>Course</th>
-                <th>Coach</th>
-            </tr>
-            <tr>
-                <td> {{ booking.booking_date }} </td>
-                <td> {{ booking.course_name }} </td>
-                <td> {{ booking.coach_name }} </td>
-                <td><a href="{% url 'edit_booking' booking.pk %}"><small>Edit</small></a></td>
-                <td><a href="{% url 'delete_booking' booking.pk %}"><small>Delete</small></a></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Coach</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{ booking.booking_date }} </td>
+                    <td> {{ booking.course_name }} </td>
+                    <td> {{ booking.coach_name }} </td>
+                    <td><a href="{% url 'edit_booking' booking.pk %}"><small>Edit</small></a></td>
+                    <td><a href="{% url 'delete_booking' booking.pk %}"><small>Delete</small></a></td>
+                </tr>
+            </tbody>
             {% empty %}
                 <p class="text-center" style="color:red"><em><strong>You have no booked courses. Click on the link below to add a booking.</strong></em></p>
             {% endfor %}

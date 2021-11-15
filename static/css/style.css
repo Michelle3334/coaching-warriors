@@ -31,8 +31,3 @@ body {
 ul.errorlist {
     color: red;
 }
-
-/**Table style**/
-table, th, td {
-    border: 1px solid black;
-  }
