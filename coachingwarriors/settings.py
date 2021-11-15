@@ -115,6 +115,7 @@ WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
 ACCOUNT_FORMS = {
     'signup': 'members.forms.UserRegisterForm',
     'login': 'members.forms.UserLoginForm',
+    'change_password': 'members.forms.PasswordEditForm',
     }
 
 # Email settings

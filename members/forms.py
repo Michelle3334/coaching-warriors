@@ -1,8 +1,8 @@
 """Forms for Members"""
-from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
-from allauth.account.forms import SignupForm, LoginForm
 from django import forms
+from allauth.account.forms import SignupForm, LoginForm, ChangePasswordForm
 from .models import Booking
 
 
@@ -59,15 +59,15 @@ class ProfileForm(UserChangeForm):
             )
 
 
-class PasswordEditForm(PasswordChangeForm):
+class PasswordEditForm(ChangePasswordForm):
     """Password change view"""
-    old_password = forms.CharField(
+    oldpassword = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'form-control', 'type': 'password'}))
-    new_password1 = forms.CharField(
+    password1 = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'form-control', 'type': 'password'}))
-    new_password2 = forms.CharField(
+    password2 = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'form-control', 'type': 'password'}))
 
@@ -75,9 +75,9 @@ class PasswordEditForm(PasswordChangeForm):
         """Meta class"""
         model = User
         fields = (
-            'old_password',
-            'new_password1',
-            'new_password1',
+            'oldpassword',
+            'password1',
+            'password1',
             )
 
 
