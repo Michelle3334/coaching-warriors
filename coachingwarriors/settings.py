@@ -35,7 +35,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['coachingwarriors.herokuapp.com', 'localhost']
 
@@ -110,6 +110,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'coachingwarriors.wsgi.application'
+
+# User Form settings
+ACCOUNT_FORMS = {'signup': 'members.forms.RegisterForm'}
 
 # Email settings
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

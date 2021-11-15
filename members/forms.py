@@ -1,8 +1,25 @@
 """Forms for Members"""
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from allauth.account.forms import SignupForm
 from django.contrib.auth.models import User
 from django import forms
 from .models import Booking
+
+
+class RegisterForm(SignupForm):
+    """Registration form"""
+    class Meta:
+        """Meta class"""
+        model = User
+        fields = ('username', 'email', 'password1', 'password2')
+
+    def __init__(self, *args, **kwargs):
+        super(RegisterForm, self).__init__(*args, **kwargs)
+
+        self.fields['username'].widget.attrs['class'] = 'form-control'
+        self.fields['email'].widget.attrs['class'] = 'form-control'
+        self.fields['password1'].widget.attrs['class'] = 'form-control'
+        self.fields['password2'].widget.attrs['class'] = 'form-control'
 
 
 class ProfileForm(UserChangeForm):

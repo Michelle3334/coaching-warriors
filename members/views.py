@@ -8,8 +8,15 @@ from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 # from coaches.models import Coach
 # from course.models import Course
-from .forms import ProfileForm, PasswordEditForm, CreateBookingForm
+from .forms import RegisterForm, ProfileForm, PasswordEditForm, CreateBookingForm
 from .models import Booking
+
+
+class UserRegisterView(generic.CreateView):
+    """User Registration form"""
+    form_class = RegisterForm
+    template_name = 'account/signup.html'
+    success_url = reverse_lazy('home')
 
 
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
