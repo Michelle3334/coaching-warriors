@@ -19,7 +19,6 @@
 <div class="container d-flex justify-content-center">
     <div class="row col-8">
         <table class="table table-sm">
-            {% for booking in booking_list %}
             <thead>
                 <tr>
                     <th scope="col">Date</th>
@@ -29,6 +28,7 @@
                     <th scope="col"></th>
                 </tr>
             </thead>
+            {% for booking in booking_list %}
             <tbody>
                 <tr>
                     <td> {{ booking.booking_date }} </td>
