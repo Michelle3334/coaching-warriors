@@ -61,12 +61,16 @@ class ProfileForm(UserChangeForm):
 class PasswordEditForm(ChangePasswordForm):
     """Password change view"""
     oldpassword = forms.CharField(
+        label="Old password",
         widget=forms.PasswordInput(attrs={
-            'class': 'form-control', 'type': 'password'}))
+            'class': 'form-control',
+            'type': 'password'}))
     password1 = forms.CharField(
+        label="New password",
         widget=forms.PasswordInput(attrs={
             'class': 'form-control', 'type': 'password'}))
     password2 = forms.CharField(
+        label="New password (again)",
         widget=forms.PasswordInput(attrs={
             'class': 'form-control', 'type': 'password'}))
 

@@ -1,11 +1,8 @@
 """Views for Member profile view"""
-# from django.shortcuts import render
-from django.views import generic
-from allauth.account.views import PasswordChangeView
-# from django.contrib.auth.models import User
-from django.views.generic import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-# from django.contrib.messages.views import SuccessMessageMixin
+from django.views import generic
+from django.views.generic import CreateView, UpdateView, DeleteView
+from allauth.account.views import PasswordChangeView
 # from coaches.models import Coach
 # from course.models import Course
 from .forms import UserRegisterForm, UserLoginForm, ProfileForm, PasswordEditForm, CreateBookingForm
@@ -19,6 +16,7 @@ class UserRegisterView(generic.CreateView):
     success_url = reverse_lazy('home')
 
     def save(self, request):
+        """Save user to user model"""
         user = super(UserRegisterForm. self).save(request)
         return user
 
@@ -30,6 +28,7 @@ class UserLoginView(generic.CreateView):
     success_url = reverse_lazy('home')
 
     def login(self, *args, **kwargs):
+        """User login return"""
         return super(UserLoginForm, self).login(*args, **kwargs)
 
 
@@ -40,6 +39,7 @@ class PasswordsChangeView(PasswordChangeView):
     success_url = reverse_lazy('members')
 
     def save(self):
+        """Save new password to model"""
         super(PasswordEditForm, self).save()
 
 
