@@ -219,7 +219,6 @@ There were some pylint errors in gitpod regarding missing docstrings, these erro
 
 No errors were found in the Javascript snippets.
 
-
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
 ## Compatibility Testing
