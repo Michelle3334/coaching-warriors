@@ -36,6 +36,7 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 * I would like to build and maintain relationships with potential and current visitors.
 * I would like to manage the information about the various courses.
 * I would like to be able to add draft courses so that I can finish writing the content later.
+* I would like to be able to add new coaches and manage existing coaches.
 
 ## User Stories
 ### New user goals:
@@ -314,6 +315,11 @@ Screenshots of the final test are presented below:
     * The website owner can add a draft course which will not be published to the site until the status is changed to published.
 
     <img src="media/images/course_status.PNG">
+
+6. I would like to be able to add new coaches and manage existing coaches.
+    * The website owner can add new coaches and set the status of the coach to inactive if required.
+
+    <img src="media/images/coach_manage.PNG">
 
 ## Bugs
 
