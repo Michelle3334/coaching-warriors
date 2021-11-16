@@ -24,7 +24,7 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
     * [Compatibility testing](https://github.com/Michelle3334/coaching-warriors#compatibility-testing)
     * [Performance testing](https://github.com/Michelle3334/coaching-warriors#performance-testing)
     * [User stories testing](https://github.com/Michelle3334/coaching-warriors#user-stories-testing)
-    * [Known bugs](https://github.com/Michelle3334/coaching-warriors#known-bugs)
+    * [Bugs](https://github.com/Michelle3334/coaching-warriors#bugs)
 6. [Deployment](https://github.com/Michelle3334/coaching-warriors#deployment)
 7. [Credits](https://github.com/Michelle3334/coaching-warriors#credits)
 8. [Acknowledgments](https://github.com/Michelle3334/coaching-warriors#acknowledgements)
@@ -327,7 +327,7 @@ Screenshots of the final test are presented below:
     <img src="media/images/coach_manage.PNG">
 
 ## Bugs
-
+During development some bugs were found, and repaired.
 * **Summernote was not working in Heroku**
 
     **Fix:** <code>X_FRAME_OPTIONS = 'SAMEORIGIN'</code> needed to be added to the settings.py file.
