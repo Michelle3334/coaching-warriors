@@ -82,7 +82,7 @@ class PasswordEditForm(ChangePasswordForm):
         fields = (
             'oldpassword',
             'password1',
-            'password1',
+            'password2',
             )
 
 

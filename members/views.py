@@ -3,8 +3,6 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView, UpdateView, DeleteView
 from allauth.account.views import PasswordChangeView
-# from coaches.models import Coach
-# from course.models import Course
 from .forms import UserRegisterForm, UserLoginForm, ProfileForm, PasswordEditForm, CreateBookingForm
 from .models import Booking
 
