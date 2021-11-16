@@ -5,7 +5,7 @@
 
 The aim of this project was to build a Full-Stack site based on business logic used to control a centrally-owned dataset.
 
-Coaching warriors is a site designed to showcase the various courses that the coaches offer. Users can find information about the courses and coaches, and apply to attend a course.
+Coaching warriors is a site designed to showcase the various courses that the coaches offer. Users can find information about the courses and coaches, and apply to attend a course. If they register on the website they can create and manage their own bookings to attend the available courses.
 
 The live site can be found <a href="https://coachingwarriors.herokuapp.com/" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
 
