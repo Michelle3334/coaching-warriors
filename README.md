@@ -178,17 +178,12 @@ Images were sourced from pixabay.com.
 
 # Testing
 ## Functionality Testing
+### Manual testing
 * I used Google Chrome developer tools throughout the development process for testing and solving problems with style and display issues.
 * All links were tested multiple times during the development process and again once the project was completed to ensure that all pages were linked correctly.
 * All Forms and form elements were tested to ensure that they work as they should, with user feedback on errors as well as user feedback on successful submission.
 
-## Code Validation
-**1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.**
-
-No errors were found in the style.css
-<img src="media/images/css_valid.PNG">
-
-**2. Django testing framework was used to test the forms, views and models in all four apps**
+### Django testing framework was used to test the forms, views and models**
 
 * The majority of the view, models and forms were tested using the unit testing functionality in Django, these tests can be viewed in the <code>test.py</code> files in the various apps. The remainder were tested manually during the functional testing both during development and after completion.
 
@@ -209,12 +204,18 @@ No errors were found in the style.css
 * Members app
 <img src="media/images/members_coverage.PNG">
 
-**3. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
+## Code Validation
+**1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.**
+
+No errors were found in the style.css
+<img src="media/images/css_valid.PNG">
+
+**2. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
 
 All Python files were tested with PEP8, with no errors found.
 There were some pylint errors in gitpod regarding missing docstrings, these errors were fixed during development.
 
-**4. <a href="https://beautifytools.com/javascript-validator.php">Beautify Tools</a> was used to test the Javascript snippets.**
+**3. <a href="https://beautifytools.com/javascript-validator.php">Beautify Tools</a> was used to test the Javascript snippets.**
 
 No errors were found in the Javascript snippets.
 
