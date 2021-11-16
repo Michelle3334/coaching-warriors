@@ -14,7 +14,7 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
     * [Website owner goals](https://github.com/Michelle3334/coaching-warriors#website-owner-business-goals)
     * [User stories](https://github.com/Michelle3334/coaching-warriors#user-stories)
     * [Wireframes](https://github.com/Michelle3334/coaching-warriors#wireframes)
-    * [Surface](https://github.com/Michelle3334/coaching-warriors#surface)
+    * [Design](https://github.com/Michelle3334/coaching-warriors#design)
 2. [Features](https://github.com/Michelle3334/coaching-warriors#features)
 3. [Database Schema](https://github.com/Michelle3334/coaching-warriors#database-schema)
 4. [Technologies Used](https://github.com/Michelle3334/coaching-warriors#technologies-used)
@@ -53,7 +53,7 @@ The live site can be found <a href="https://coachingwarriors.herokuapp.com/" tar
 
 ## Wireframes
 I used Balsamiq to create the wireframes.
-Wireframes were not created for the Profile/View course pages as the basic design would be similar to other form styled pages.
+Wireframes were not created for the Profile/View course pages as the basic design is similar to other form styled pages.
 
 * Home page 
 <img src="media/images/Home_page (desktop).PNG" >
@@ -89,7 +89,7 @@ Wireframes were not created for the Profile/View course pages as the basic desig
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
-## Surface
+## Design
 ### Colors
 The main colors used in this project:
 * Background color: Gray93 #EDEDED
@@ -97,7 +97,7 @@ The main colors used in this project:
 <img src="media/images/contrast-check.PNG">
 
 ### Fonts
-Sans-Serif is used as the main font.
+Sans-Serif is used as the main font. I did not feel it necessary to change the default font type as Sans-Serif is an easy font to read and displays well throughout the site.
 
 ### Images
 Images were sourced from pixabay.com.
@@ -113,15 +113,12 @@ Images were sourced from pixabay.com.
    * A confirmation message displays when the user logs in or logs out.
     <img src="media/images/login.PNG"> 
     <img src="media/images/logout.PNG"> 
-
-### Landing page
-   * The landing page has an eye catching image to inspire.
-<img src="media/images/hero.jpg">
     
 ### Available Courses section
    * On the home page the available courses are displayed, with a short description.
    * The images are responsive when the user scrolls over an image.
-   * If the user clicks on a specific course they can view the full description of the course information. At the bottom of the course detail page is a link to the booking page.
+   * If the user clicks on a specific course they can view the full description of the course information. At the bottom of the course detail page is a link to the booking request page.
+   * If the user is logged in then the link at the bottom of the course information page will direct them to the Member booking page where they can create a booking.
 
 <img src="media/images/course.PNG">  
 
@@ -141,8 +138,14 @@ Images were sourced from pixabay.com.
    * The information provided is sent to an active gmail account. 
     <img src="media/images/contact.PNG">
 
+### Profile page
+    
+* If the user is logged in they are able to view and update their profile.
+* They can also view courses they have booked, edit or delete these courses.
+    <img src="media/images/profile.PNG">
+
 ## Future features
-* A Calendar on the booking form which shows which days are available for booking.
+* A Calendar on the create booking page for logged in users which shows which days are booked and which are available for booking.
 
 [Back to Table of Contents](https://github.com/Michelle3334/coaching-warriors#table-of-contents)
 
@@ -176,8 +179,8 @@ Images were sourced from pixabay.com.
 # Testing
 ## Functionality Testing
 * I used Google Chrome developer tools throughout the development process for testing and solving problems with style and display issues.
-* All links were tested multiple times during the development process to ensure that all pages were linked correctly.
-* Form elements were tested to ensure that they work as they should, with user feedback on errors as well as successful submission.
+* All links were tested multiple times during the development process and again once the project was completed to ensure that all pages were linked correctly.
+* All Forms and form elements were tested to ensure that they work as they should, with user feedback on errors as well as user feedback on successful submission.
 
 ## Code Validation
 **1. CSS Validation using <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel="noopener">W3C CSS Validator Services</a>.**
@@ -186,16 +189,25 @@ No errors were found in the style.css
 <img src="media/images/css_valid.PNG">
 
 **2. Django testing framework was used to test the forms, views and models in all four apps**
+
+* The majority of the view, models and forms were tested using the unit testing functionality in Django, these tests can be viewed in the <code>test.py</code> files in the various apps. The remainder were tested manually during the functional testing both during development and after completion.
+
+    <img src="media/images/tests.PNG">
     
 * Booking app
+    <img src="media/images/booking_coverage.PNG">
 
 * Coaches app
-
-<img src="media/images/coaches_test.PNG">
+    <img src="media/images/coaches_coverage.PNG">
 
 * Contactemail app
+    <img src="media/images/contactemail_coverage.PNG">
 
 * Course app
+    <img src="media/images/course_coverage.PNG">
+
+* Members app
+<img src="media/images/members_coverage.PNG">
 
 **3. <a href="http://pep8online.com/">PEP8</a> was used to test the Python code**
 
