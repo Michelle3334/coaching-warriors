@@ -184,25 +184,30 @@ Images were sourced from pixabay.com.
 * All links were tested multiple times during the development process and again once the project was completed to ensure that all pages were linked correctly.
 * All Forms and form elements were tested to ensure that they work as they should, with user feedback on errors as well as user feedback on successful submission.
 
-### Django testing framework was used to test the forms, views and models**
+### Django testing framework
 
 * The majority of the view, models and forms were tested using the unit testing functionality in Django, these tests can be viewed in the <code>test.py</code> files in the various apps. The remainder were tested manually during the functional testing both during development and after completion.
 
     <img src="media/images/tests.PNG">
     
-* Booking app
+* **Booking app**
+
     <img src="media/images/booking_coverage.PNG">
 
-* Coaches app
+* **Coaches app**
+
     <img src="media/images/coaches_coverage.PNG">
 
-* Contactemail app
+* **Contactemail app**
+
     <img src="media/images/contactemail_coverage.PNG">
 
-* Course app
+* **Course app**
+
     <img src="media/images/course_coverage.PNG">
 
-* Members app
+* **Members app**
+
 <img src="media/images/members_coverage.PNG">
 
 ## Code Validation
