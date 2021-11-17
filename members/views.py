@@ -2,6 +2,7 @@
 from django.urls import reverse_lazy
 from django.views import generic
 from django.views.generic import CreateView, UpdateView, DeleteView
+from django.contrib.messages.views import SuccessMessageMixin
 from allauth.account.views import PasswordChangeView
 from .forms import UserRegisterForm, UserLoginForm, ProfileForm, PasswordEditForm, CreateBookingForm
 from .models import Booking
@@ -41,7 +42,7 @@ class PasswordsChangeView(PasswordChangeView):
         super(PasswordEditForm, self).save()
 
 
-class MemberViewProfile(generic.UpdateView):
+class MemberViewProfile(SuccessMessageMixin, generic.UpdateView):
     """View and update user profile"""
     form_class = ProfileForm
     template_name = 'profile.html'

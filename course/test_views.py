@@ -1,6 +1,5 @@
 """Course app view testcases"""
 from django.test import TestCase
-from .models import Course
 
 
 class TestCourseListViews(TestCase):
@@ -10,17 +9,6 @@ class TestCourseListViews(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
-
-
-# class TestCourseDetailViews(TestCase):
-#    """Test Course detail view"""
-#    def test_course_detail(self):
-#        """Test Course detail view"""
-#        item = Course.objects.create(
-#            course_name='Test course', slug='test_course', status='1')
-#        response = self.client.get(f'/slug:slug/{item.slug}')
-#        self.assertEqual(response.status_code, 200)
-#        self.assertTemplateUsed(response, 'course_detail.html')
 
 
 class TestGalleryViews(TestCase):

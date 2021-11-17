@@ -5,8 +5,6 @@ from django.shortcuts import render
 from django.contrib import messages
 from .forms import BookingForm
 
-# Create your views here.
-
 
 def booking(request):
     """Booking app view for submission of form"""

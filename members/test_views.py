@@ -14,13 +14,6 @@ class TestMemberViews(TestCase):
     def tearDown(self):
         self.user.delete()
 
-#    def test_user_register(self):
-#        """Test user register view"""
-#        self.client.login(username='test', password='12test12')
-#        response = self.client.get('/accounts/signup/')
-#        self.assertEqual(response.status_code, 200)
-#        self.assertTemplateUsed(response, 'account/signup.html')
-
     def test_user_login(self):
         """Test user login view"""
         response = self.client.get('/accounts/login/')
@@ -47,17 +40,3 @@ class TestMemberViews(TestCase):
         response = self.client.get('/create_booking/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'create_booking.html')
-
-#    def test_edit_booking_view(self):
-#        """Test Create Booking view"""
-#        self.client.login(username='test', password='12test12')
-#        response = self.client.get('/edit_booking/<int:pk>')
-#        self.assertEqual(response.status_code, 200)
-#        self.assertTemplateUsed(response, 'edit_booking.html')
-
-#    def test_delete_booking_view(self):
-#        """Test delete Booking view"""
-#        self.client.login(username='test', password='12test12')
-#        response = self.client.get('/member_booking/<int:pk>/delete/')
-#        self.assertEqual(response.status_code, 200)
-#        self.assertTemplateUsed(response, 'delete_booking.html')
